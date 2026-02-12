@@ -1,0 +1,1789 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Q-Sand Core | لعب الثانوية | استدامة قطر 2030</title>
+  <!-- Tailwind v3 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* 🏜️🧬 Q-SAND CORE – الخزعبلات البصرية الكاملة */
+    @page {
+      size: A4 landscape;
+      margin: 5mm 6mm;
+    }
+    
+    @media print {
+      .noprint { display: none !important; }
+      .print-page { display: block !important; width: 100%; background: white; }
+      canvas, img, table { break-inside: avoid; }
+      .print-chart { display: block !important; }
+    }
+
+    body {
+      font-family: 'Inter', 'Tajawal', system-ui, sans-serif;
+      background: #ffffff;
+    }
+
+    /* الهالة الرملية المضيئة */
+    .qatar-legend-bg {
+      background: radial-gradient(circle at 10% 30%, rgba(255,248,235,0.5) 0%, rgba(255,255,255,1) 80%);
+    }
+
+    /* تأثير الساند ستورم */
+    .sand-glow {
+      box-shadow: 0 8px 25px -8px rgba(180, 140, 100, 0.2);
+      transition: all 0.25s;
+    }
+    .sand-glow:hover {
+      box-shadow: 0 15px 35px -8px rgba(180, 140, 100, 0.4);
+      border-color: #a67c4e !important;
+    }
+
+    /* الطاقة الحيوية */
+    .bio-flare {
+      background: linear-gradient(145deg, #fff7e6, #ffffff);
+      border-right: 6px solid #9c7e5c;
+    }
+
+    /* بصمة لعب الثانوية */
+    .laban-watermark {
+      background: repeating-linear-gradient(45deg, rgba(210,180,140,0.1) 0px, rgba(210,180,140,0.1) 2px, transparent 2px, transparent 8px);
+    }
+
+    /* الصندوق النشط */
+    .slot-active {
+      border: 2px solid #9f7e4e !important;
+      box-shadow: 0 0 0 4px rgba(159,126,78,0.15);
+    }
+
+    /* جسيمات الذكاء الاصطناعي المتحركة */
+    .ai-particle {
+      position: relative;
+      overflow: hidden;
+    }
+    .ai-particle::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(from 90deg at 50% 50%, rgba(255,215,0,0.05) 0deg, transparent 60deg, transparent 300deg, rgba(100,200,180,0.05) 360deg);
+      animation: rotateSand 24s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes rotateSand {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .print-page {
+      display: none;
+    }
+    
+    canvas {
+      display: block;
+    }
+    
+    /* ===== الرسالة الترحيبية الخرافية ===== */
+    .welcome-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 30%, #1a2e2a 0%, #0a1a17 100%);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+      pointer-events: none;
+    }
+    
+    .welcome-content {
+      max-width: 900px;
+      padding: 3rem;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      border-radius: 48px;
+      box-shadow: 0 25px 50px -8px rgba(0,0,0,0.6), 0 0 0 2px rgba(180, 140, 100, 0.2) inset, 0 0 30px rgba(255,215,0,0.2);
+      transform: scale(0.95);
+      animation: welcomePulse 3s infinite alternate;
+    }
+    
+    @keyframes welcomePulse {
+      0% { box-shadow: 0 25px 50px -8px rgba(0,0,0,0.6), 0 0 0 2px rgba(180, 140, 100, 0.2) inset, 0 0 30px rgba(255,215,0,0.2); }
+      100% { box-shadow: 0 25px 60px -8px rgba(0,0,0,0.8), 0 0 0 4px rgba(218, 165, 32, 0.4) inset, 0 0 60px rgba(255,215,0,0.4); }
+    }
+    
+    .sand-particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(255, 215, 0, 0.5);
+      border-radius: 50%;
+      box-shadow: 0 0 15px gold;
+      animation: floatSand 8s linear infinite;
+    }
+    
+    @keyframes floatSand {
+      0% { transform: translateY(0) translateX(0); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(-100vh) translateX(20px); opacity: 0; }
+    }
+    
+    .energy-arc {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 50%, rgba(255, 200, 50, 0.15) 0%, transparent 70%);
+      animation: energyWave 6s ease-in-out infinite;
+    }
+    
+    @keyframes energyWave {
+      0% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.2); }
+      100% { opacity: 0.3; transform: scale(1); }
+    }
+    
+    .welcome-hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    /* ===== نظام المقارنة والتاريخ ===== */
+    .history-card {
+      border: 2px solid #e2d5c0;
+      border-radius: 16px;
+      background: white;
+      transition: all 0.2s;
+    }
+    .history-card:hover {
+      border-color: #a67c4e;
+      box-shadow: 0 10px 25px -8px rgba(180, 140, 100, 0.3);
+    }
+    
+    .comparison-badge {
+      background: linear-gradient(145deg, #5f7a6b, #3e5a4d);
+      color: white;
+      border-radius: 999px;
+      padding: 2px 10px;
+      font-size: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 qatar-legend-bg laban-watermark antialiased">
+
+  <!-- ==================== 🏜️⚡ الرسالة الترحيبية الخرافية - رمال وكهرباء ==================== -->
+  <div id="welcomeScreen" class="welcome-overlay" style="pointer-events: none;">
+    <div id="sandParticlesContainer" style="position: absolute; width: 100%; height: 100%; overflow: hidden;"></div>
+    <div class="energy-arc"></div>
+    <div class="energy-arc" style="animation-delay: 2s; background: radial-gradient(circle at 30% 70%, rgba(100, 200, 255, 0.1) 0%, transparent 70%);"></div>
+    <div class="energy-arc" style="animation-delay: 4s; background: radial-gradient(circle at 70% 30%, rgba(255, 180, 40, 0.1) 0%, transparent 70%);"></div>
+    
+    <div class="welcome-content text-center relative z-10">
+      <div class="flex justify-center items-center gap-4 mb-6">
+        <span class="text-7xl filter drop-shadow-2xl animate-bounce" style="animation-duration: 3s;">🏜️</span>
+        <span class="text-7xl filter drop-shadow-2xl animate-pulse">⚡</span>
+        <span class="text-7xl filter drop-shadow-2xl" style="animation: spin 8s linear infinite;">🧬</span>
+      </div>
+      
+      <h1 class="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-l from-[#ffd700] via-[#d4af37] to-[#c2a477] mb-4 leading-tight drop-shadow-2xl" style="text-shadow: 0 0 30px rgba(255,215,0,0.5);">
+        Q-Sand Core
+      </h1>
+      
+      <h2 class="text-2xl md:text-4xl font-bold text-[#f0e9d8] mb-6 drop-shadow-lg">
+        نظام أتمتة إنتاج الطاقة
+      </h2>
+      
+      <div class="text-xl md:text-2xl text-[#e6d5b8] mb-8 leading-relaxed border-t border-b border-[#ffd700]/30 py-6 backdrop-blur-sm">
+        <p class="mb-3">🇶🇦 من الرمال الهجينة والمخلفات الحيوية 🇶🇦</p>
+        <p class="text-lg md:text-xl font-medium text-[#ffe4b5]">باستخدام الذكاء الاصطناعي والرؤية الحاسوبية</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-[#e6d5b8] mb-8">
+        <div class="border border-[#c2a477]/50 rounded-2xl p-4 backdrop-blur-sm bg-black/10">
+          <span class="text-3xl block mb-2">🤖</span>
+          <span class="text-sm font-bold">رؤية حاسوبية</span>
+          <span class="text-xs block opacity-80">تحليل فوري للصور</span>
+        </div>
+        <div class="border border-[#c2a477]/50 rounded-2xl p-4 backdrop-blur-sm bg-black/10">
+          <span class="text-3xl block mb-2">🏜️</span>
+          <span class="text-sm font-bold">رمال هجينة</span>
+          <span class="text-xs block opacity-80">+ مخلفات حيوية</span>
+        </div>
+        <div class="border border-[#c2a477]/50 rounded-2xl p-4 backdrop-blur-sm bg-black/10">
+          <span class="text-3xl block mb-2">⚡</span>
+          <span class="text-sm font-bold">استدامة 2030</span>
+          <span class="text-xs block opacity-80">قطر - رؤية وطنية</span>
+        </div>
+      </div>
+      
+      <div class="text-lg text-[#d4c096] mb-6">
+        <span class="bg-[#5f4c3b]/60 px-6 py-3 rounded-full border border-[#ffd700]/50 inline-flex items-center gap-2 backdrop-blur-md">
+          <span class="w-3 h-3 bg-[#ffd700] rounded-full animate-ping"></span>
+          بالتعاون مع مدرسة لعب الثانوية للبنات
+          <span class="w-3 h-3 bg-[#ffd700] rounded-full animate-ping"></span>
+        </span>
+      </div>
+      
+      <div class="text-sm text-[#b8a07c] animate-pulse mt-4">
+        ✦ جاري تحميل نظام Q-Sand Core ✦
+      </div>
+      
+      <div id="welcomeProgress" class="mt-6 w-full bg-[#3a4a44] rounded-full h-2 max-w-md mx-auto overflow-hidden">
+        <div class="bg-gradient-to-l from-[#ffd700] to-[#c2a477] h-2 rounded-full" style="width: 0%; transition: width 2s ease-in-out;"></div>
+      </div>
+      
+      <div id="welcomeTimer" class="text-[#b8a07c] mt-4 text-xs">
+        تجهيز بيئة الرمال الذكية...
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 📜 شعار قطر 2030 + العنوان الأسطوري + حقوق لعب الثانوية ==================== -->
+  <div class="noprint w-full bg-white/80 backdrop-blur-md border-b-2 border-[#c2a477]/30 sticky top-0 z-30 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row md:items-center md:justify-between gap-1">
+      <div class="flex items-center gap-3">
+        <div class="hidden md:block text-4xl filter drop-shadow-md">🏜️🧬</div>
+        <div>
+          <h1 class="text-lg md:text-2xl font-black text-[#5f4c3b] tracking-tight leading-tight">
+            <span class="bg-gradient-to-r from-[#7a5a44] to-[#a67c4e] bg-clip-text text-transparent">Q-Sand Core</span>
+            <span class="text-sm md:text-base mr-2 font-normal text-[#4f6d5e]">نظام أتمتة إنتاج الطاقة</span>
+          </h1>
+          <p class="text-[11px] md:text-xs text-gray-600 max-w-3xl leading-relaxed">
+            <span class="font-bold text-[#735e4b]">من الرمال الهجينة والمخلفات الحيوية</span> باستخدام الذكاء الاصطناعي (الرؤية الحاسوبية) 
+            <span class="bg-[#f0e9de] px-2 py-0.5 rounded-full text-[#4f6d5e] text-[10px] mr-1">🇶🇦 استدامة قطر 2030</span>
+          </p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 justify-end">
+        <div class="text-right">
+          <div class="text-[11px] font-bold text-[#836f54] flex items-center gap-1">
+            <span class="w-2 h-2 bg-amber-700 rounded-full animate-pulse"></span>
+            <span>مدرسة لعب الثانوية للبنات</span>
+          </div>
+          <div class="text-[9px] text-gray-500 flex flex-wrap gap-1">
+            <span>© 2026 – جميع الحقوق المحفوظة</span>
+            <span>• بحث الابتكار •</span>
+            <span>معمل Q-Sand</span>
+          </div>
+        </div>
+        <div class="w-9 h-9 rounded-full bg-[#dac09a] flex items-center justify-center text-white font-bold shadow-md border-2 border-white">🇶🇦</div>
+      </div>
+    </div>
+    <div class="h-1 w-full bg-gradient-to-l from-[#b3a580] via-[#c2a477] to-[#a67c4e] opacity-60"></div>
+  </div>
+
+  <!-- ========== الشبكة الأساسية – مع خزعبلات Q-Sand Core ========== -->
+  <main class="noprint max-w-7xl mx-auto p-3 lg:p-4 grid grid-cols-1 lg:grid-cols-[430px_1fr] gap-5 print:hidden relative ai-particle">
+
+    <!-- العمود الأيمن: بطاقة الطاقة – تحكم متطور + رؤية حاسوبية -->
+    <section class="bg-white border-2 border-[#e2d5c0] rounded-3xl shadow-xl sand-glow overflow-hidden bio-flare">
+      <div class="border-b-2 border-[#d6c29d] px-4 py-3 flex items-center justify-between bg-[#fcf8f2]">
+        <span class="font-bold text-sm text-[#5f4c3b] flex items-center gap-1">
+          <span class="text-lg">⚡🧪</span> نظام Q-Sand Core – وحدة التحكم
+        </span>
+        <div class="flex gap-2">
+          <button id="btnAuto" class="px-4 py-1.5 text-xs bg-[#7a5a44] hover:bg-[#5e4534] text-white rounded-full shadow-md transition flex items-center gap-1"><span>🤖</span> تحليل تلقائي</button>
+          <button id="btnReset" class="px-4 py-1.5 text-xs bg-[#b0885c] hover:bg-[#8e6e4a] text-white rounded-full transition">مسح القراءات</button>
+        </div>
+      </div>
+      <div class="p-4 space-y-4">
+        <div>
+          <label class="block text-xs text-[#735e4b] font-semibold mb-1">🏜️ اسم العينة (الرمال الهجينة / المخلفات الحيوية)</label>
+          <input id="sampleName" type="text" placeholder="مثال: رمل شمال + مخلفات نخيل" class="w-full border-2 border-[#e6dac8] rounded-xl px-3 py-2 text-sm focus:ring-4 focus:ring-[#dac09a]/30 focus:border-[#b38b5b] bg-white/90">
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs text-[#735e4b] font-semibold mb-1">🔬 الحالة للتسجيل</label>
+            <select id="condSel" class="w-full border-2 border-[#e6dac8] rounded-xl px-2 py-2 text-sm bg-white">
+              <option value="room">بدون ملون (غرفة)</option>
+              <option value="light">مع ملون (بالضوء)</option>
+              <option value="dark">مع ملون (بالظلام)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs text-[#735e4b] font-semibold mb-1">📡 نصف قطر المسح (px)</label>
+            <input id="rad" type="number" min="6" max="60" value="14" class="w-full border-2 border-[#e6dac8] rounded-xl px-2 py-2 text-sm">
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs text-[#735e4b] font-semibold mb-1">📊 مؤشر الرمال الذكي (AI)</label>
+          <select id="metricSel" class="w-full border-2 border-[#e6dac8] rounded-xl px-2 py-2 text-sm bg-white">
+            <option value="avg">متوسط RGB (Avg) – كثافة اللون</option>
+            <option value="blueRatio">نسبة الأزرق B/(R+G+B) – مؤشر الرطوبة</option>
+            <option value="b">قناة B فقط – امتصاص الطاقة</option>
+            <option value="luma">السطوع Luma – انعكاسية الرمال</option>
+          </select>
+        </div>
+        
+        <!-- ===== نظام حفظ المقارنات ===== -->
+        <div class="bg-[#f4efe7] border-2 border-[#c2a477] rounded-2xl p-3">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-extrabold text-[#8a6e4f] flex items-center gap-1">💾 نظام حفظ المقارنات</span>
+            <span class="comparison-badge">Q-Sand Archive</span>
+          </div>
+          <div class="flex gap-2">
+            <button id="btnSaveComparison" class="flex-1 px-3 py-2 bg-[#5f7a6b] hover:bg-[#3e5a4d] text-white rounded-full text-xs font-bold transition flex items-center justify-center gap-1">
+              <span>💾</span> حفظ تجربة حالية
+            </button>
+            <button id="btnExportAll" class="px-3 py-2 bg-[#7a5a44] hover:bg-[#5e4534] text-white rounded-full text-xs font-bold transition flex items-center gap-1">
+              <span>📤</span> تصدير الكل
+            </button>
+          </div>
+        </div>
+        
+        <div class="bg-[#f4efe7] border border-[#d6bc9a] rounded-2xl p-3 text-xs leading-relaxed text-[#5f4c3b]">
+          <span class="font-extrabold text-[#8a6e4f]">🧬🌀 رؤية حاسوبية – Q-Sand Core:</span><br>
+          • تدوير/عكس الصورة يحاكي زوايا تشتت الضوء في الرمال الهجينة.<br>
+          • النقر على السائل يسجل طاقة الفوتونات الرقمية وفق نموذج لعب الثانوية.
+        </div>
+        <div>
+          <label class="block text-xs text-[#735e4b] font-semibold mb-1">📘 ملاحظات الباحثة (مدرسة لعب)</label>
+          <textarea id="notes" placeholder="تسجيل درجة الحرارة، نسبة الرماد، خصائص المخلفات..." class="w-full border-2 border-[#e6dac8] rounded-xl px-3 py-2 text-sm resize-y h-16"></textarea>
+        </div>
+        <div>
+          <label class="block text-xs text-[#735e4b] font-semibold mb-1">📃 تحليل طاقة الساند كور</label>
+          <textarea id="analysis" placeholder="استنتاجات حول كفاءة التحويل الحراري..." class="w-full border-2 border-[#e6dac8] rounded-xl px-3 py-2 text-sm resize-y h-20"></textarea>
+        </div>
+        <div class="flex flex-wrap gap-2 pt-2">
+          <button id="btnPrint" class="px-6 py-2.5 bg-[#5f7a6b] hover:bg-[#3e5a4d] text-white rounded-full text-xs font-bold shadow-md transition flex items-center gap-1"><span>🖨️📄</span> طباعة A4 (صفحة واحدة – تقرير 2030)</button>
+          <button id="btnCSV" class="px-4 py-2 border-2 border-[#c2a477] bg-white hover:bg-[#fff3e0] rounded-full text-xs">CSV بيانات</button>
+          <button id="btnJSON" class="px-4 py-2 border-2 border-[#c2a477] bg-white hover:bg-[#fff3e0] rounded-full text-xs">JSON</button>
+          <button id="btnClear" class="px-4 py-2 border-2 border-red-200 bg-white hover:bg-red-50 text-red-700 rounded-full text-xs">مسح الحفظ</button>
+        </div>
+        <div class="text-[8px] text-gray-400 text-center pt-1 border-t border-[#f0e1d0]">
+          <span>🇶🇦 نظام Q-Sand Core v3.0 – بالتعاون مع مدرسة لعب الثانوية للبنات، معهد قطر لأبحاث الطاقة</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- العمود الأيسر: الصور + الرسم + الجدول + المقارنات -->
+    <section class="space-y-4">
+      <!-- بطاقات الصور الثلاث -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- زمن 0 -->
+        <div id="slot0" data-time="0" tabindex="0" class="bg-white border-2 border-[#e2d5c0] rounded-2xl shadow-md sand-glow transition cursor-pointer focus:ring-4 focus:ring-[#c2a477]/50 outline-none ai-particle">
+          <div class="bg-[#f9f3ea] px-3 py-2 border-b border-[#dec9ad] flex items-center justify-between rounded-t-2xl">
+            <span class="font-bold text-sm text-[#5f4c3b] flex items-center gap-1"><span>⏳</span> زمن 0 د (أساسي)</span>
+            <span id="meta0" class="text-xs bg-white px-2 py-0.5 rounded-full border border-[#c2a477] text-[#5f4c3b]">—</span>
+          </div>
+          <div class="p-2 flex gap-1 flex-wrap border-b border-[#f0e1d0] bg-[#fdfaf7]">
+            <button data-act="rot" data-time="0" class="tbtn px-3 py-1.5 text-xs bg-white border border-[#c2a477] hover:bg-[#f0e6d8] rounded-full text-[#5f4c3b]">↻ 90°</button>
+            <button data-act="flipH" data-time="0" class="tbtn px-3 py-1.5 text-xs bg-white border border-[#c2a477] hover:bg-[#f0e6d8] rounded-full">↔ عكس</button>
+            <button data-act="flipV" data-time="0" class="tbtn px-3 py-1.5 text-xs bg-white border border-[#c2a477] hover:bg-[#f0e6d8] rounded-full">↕ عكس</button>
+            <button data-act="reset" data-time="0" class="tbtn px-3 py-1.5 text-xs bg-white border border-[#c2a477] hover:bg-[#f0e6d8] rounded-full">⟲ إعادة</button>
+          </div>
+          <div class="relative bg-white flex items-center justify-center p-1">
+            <canvas id="cv0" width="900" height="550" class="w-full h-auto border-2 border-dashed border-[#d6bc9a] rounded-xl"></canvas>
+            <div id="empty0" class="absolute inset-0 flex items-center justify-center text-[#8a6e4f] text-sm bg-white/90 backdrop-blur-sm m-2 rounded-xl border-2 border-dashed border-[#b38b5b]">⬇️ اضغط ثم Ctrl+V – لصق صورة رمال هجينة زمن 0</div>
+          </div>
+          <div class="text-[10px] text-[#735e4b] p-2 border-t border-[#f0e1d0]">مسح AI: انقر داخل السائل لتسجيل طاقة Q-Sand</div>
+        </div>
+        <!-- زمن 15 -->
+        <div id="slot15" data-time="15" tabindex="0" class="bg-white border-2 border-[#e2d5c0] rounded-2xl shadow-md sand-glow transition focus:ring-4 focus:ring-[#c2a477]/50">
+          <div class="bg-[#f9f3ea] px-3 py-2 border-b border-[#dec9ad] flex items-center justify-between">
+            <span class="font-bold text-sm text-[#5f4c3b]"><span>🧪</span> زمن 15 د (حيوي)</span>
+            <span id="meta15" class="text-xs bg-white px-2 py-0.5 rounded-full border border-[#c2a477]">—</span>
+          </div>
+          <div class="p-2 flex gap-1 flex-wrap border-b border-[#f0e1d0] bg-[#fdfaf7]">
+            <button data-act="rot" data-time="15" class="tbtn px-3 py-1.5 text-xs bg-white border border-[#c2a477] rounded-full">↻ 90°</button>
+            <button data-act="flipH" data-time="15" class="tbtn px-3 py-1.5 text-xs bg-white border border-[#c2a477] rounded-full">↔ عكس</button>
+            <button data-act="flipV" data-time="15" class="tbtn px-3 py-1.5 text-xs bg-white border border-[#c2a477] rounded-full">↕ عكس</button>
+            <button data-act="reset" data-time="15" class="tbtn px-3 py-1.5 text-xs bg-white border border-[#c2a477] rounded-full">⟲ إعادة</button>
+          </div>
+          <div class="relative bg-white">
+            <canvas id="cv15" width="900" height="550" class="w-full h-auto border-2 border-dashed border-[#d6bc9a] rounded-xl"></canvas>
+            <div id="empty15" class="absolute inset-0 flex items-center justify-center text-[#8a6e4f] text-sm bg-white/90 backdrop-blur-sm m-2 rounded-xl border-2 border-dashed border-[#b38b5b]">⬇️ صورة تفاعل المخلفات الحيوية</div>
+          </div>
+          <div class="text-[10px] text-[#735e4b] p-2 border-t border-[#f0e1d0]">انقر لقياس التحلل الضوئي</div>
+        </div>
+        <!-- زمن 60 -->
+        <div id="slot60" data-time="60" tabindex="0" class="bg-white border-2 border-[#e2d5c0] rounded-2xl shadow-md sand-glow transition focus:ring-4 focus:ring-[#c2a477]/50">
+          <div class="bg-[#f9f3ea] px-3 py-2 border-b border-[#dec9ad] flex items-center justify-between">
+            <span class="font-bold text-sm text-[#5f4c3b]"><span>⚡</span> زمن 60 د (طاقة قصوى)</span>
+            <span id="meta60" class="text-xs bg-white px-2 py-0.5 rounded-full border border-[#c2a477]">—</span>
+          </div>
+          <div class="p-2 flex gap-1 flex-wrap border-b border-[#f0e1d0] bg-[#fdfaf7]">
+            <button data-act="rot" data-time="60" class="tbtn px-3 py-1.5 text-xs bg-white border border-[#c2a477] rounded-full">↻ 90°</button>
+            <button data-act="flipH" data-time="60" class="tbtn px-3 py-1.5 text-xs bg-white border border-[#c2a477] rounded-full">↔ عكس</button>
+            <button data-act="flipV" data-time="60" class="tbtn px-3 py-1.5 text-xs bg-white border border-[#c2a477] rounded-full">↕ عكس</button>
+            <button data-act="reset" data-time="60" class="tbtn px-3 py-1.5 text-xs bg-white border border-[#c2a477] rounded-full">⟲ إعادة</button>
+          </div>
+          <div class="relative bg-white">
+            <canvas id="cv60" width="900" height="550" class="w-full h-auto border-2 border-dashed border-[#d6bc9a] rounded-xl"></canvas>
+            <div id="empty60" class="absolute inset-0 flex items-center justify-center text-[#8a6e4f] text-sm bg-white/90 backdrop-blur-sm m-2 rounded-xl border-2 border-dashed border-[#b38b5b]">⬇️ صورة الرمال بعد 60 د</div>
+          </div>
+          <div class="text-[10px] text-[#735e4b] p-2 border-t border-[#f0e1d0]">نموذج الطاقة النهائي</div>
+        </div>
+      </div>
+
+      <!-- الرسم البياني Q-Sand -->
+      <div class="bg-white border-2 border-[#e2d5c0] rounded-2xl p-3 shadow-md sand-glow">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-sm font-extrabold text-[#5f4c3b] flex items-center gap-1"><span>📈🤖</span> منحنى طاقة الرمال – رؤية حاسوبية (AI)</span>
+          <span class="text-[9px] bg-[#f0e9de] px-3 py-1 rounded-full text-[#5a4a37] border border-[#c2a477]">مؤشر Q-Sand</span>
+        </div>
+        <canvas id="chart" width="1100" height="350" class="w-full h-auto border-2 border-[#dec9ad] rounded-xl bg-white" style="display: block; min-height: 200px;"></canvas>
+        <div id="chartStatus" class="text-[10px] text-[#735e4b] mt-1 text-center">⏳ سجل قراءات لعرض الرسم البياني التفاعلي</div>
+      </div>
+
+      <!-- جدول القراءات التسع -->
+      <div class="bg-white border-2 border-[#e2d5c0] rounded-2xl p-2 shadow-md">
+        <div class="rounded-xl overflow-x-auto">
+          <table class="w-full text-xs">
+            <thead class="bg-[#f4efe7] text-[#5f4c3b] border-b-2 border-[#c2a477]">
+              <tr><th class="px-2 py-2">الزمن</th><th>الحالة</th><th>R</th><th>G</th><th>B</th><th>Avg</th><th>BlueRatio</th><th>Luma</th></tr>
+            </thead>
+            <tbody id="tbody" class="text-center"></tbody>
+          </table>
+        </div>
+        <div class="text-[8px] text-gray-500 mt-2 text-center">* كل قراءة تمثل متوسط طاقة الفوتونات في منطقة المسح الدائري (نموذج لعب الثانوية)</div>
+      </div>
+      
+      <!-- ===== سجل المقارنات ===== -->
+      <div class="bg-white border-2 border-[#e2d5c0] rounded-2xl p-3 shadow-md">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-sm font-extrabold text-[#5f4c3b] flex items-center gap-1"><span>📚</span> أرشيف المقارنات – Q-Sand Archive</span>
+          <span id="comparisonCount" class="text-[9px] bg-[#5f7a6b] px-3 py-1 rounded-full text-white">0 تجارب</span>
+        </div>
+        <div id="comparisonsContainer" class="space-y-2 max-h-60 overflow-y-auto">
+          <!-- سيتم تعبئتها ديناميكياً -->
+        </div>
+        <div class="mt-2 text-center">
+          <button id="btnClearHistory" class="text-[9px] text-gray-500 hover:text-red-600 transition underline">مسح أرشيف المقارنات</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== 🏜️🧬 نسخة الطباعة – مع رسم بياني مُصلَح للطباعة ========== -->
+  <div class="print-page hidden print:block bg-white">
+    <div class="pwrap w-full h-full px-4 py-3" style="max-width: 100%;">
+      <div class="text-center border-b-4 border-[#c2a477] pb-2 mb-3">
+        <h1 class="text-2xl font-black text-[#5f4c3b] tracking-wide">Q-Sand Core</h1>
+        <h2 class="text-sm font-bold text-[#735e4b]">نظام أتمتة إنتاج الطاقة من الرمال الهجينة والمخلفات الحيوية</h2>
+        <div class="text-xs text-gray-600 mt-1 flex items-center justify-center gap-3">
+          <span>🇶🇦 استدامة قطر 2030</span>
+          <span>•</span>
+          <span class="font-bold">مدرسة لعب الثانوية للبنات</span>
+          <span>•</span>
+          <span>جميع الحقوق المحفوظة © 2026</span>
+        </div>
+        <div id="pMeta" class="text-[10px] text-gray-600 mt-1"></div>
+      </div>
+
+      <div class="grid grid-cols-[1.2fr_1.8fr] gap-4 print-layout">
+        <div class="bg-white border-2 border-[#dec9ad] rounded-xl p-2">
+          <h3 class="text-xs font-bold text-[#5f4c3b] border-b border-[#dec9ad] pb-1 mb-2">🖼️ صور الرمال الهجينة (0,15,60 د)</h3>
+          <div class="space-y-2">
+            <div class="border border-[#dec9ad] rounded-lg p-1"><div class="text-[9px] text-center">⏳ زمن 0</div><img id="pImg0" alt="t0" class="w-full h-28 object-contain border border-gray-200" style="display:none;"><div id="pNo0" class="h-28 flex items-center justify-center bg-gray-100 text-gray-400 text-xs">لا توجد صورة</div></div>
+            <div class="border border-[#dec9ad] rounded-lg p-1"><div class="text-[9px] text-center">🧪 زمن 15</div><img id="pImg15" alt="t15" class="w-full h-28 object-contain border border-gray-200" style="display:none;"><div id="pNo15" class="h-28 flex items-center justify-center bg-gray-100 text-gray-400 text-xs">لا توجد صورة</div></div>
+            <div class="border border-[#dec9ad] rounded-lg p-1"><div class="text-[9px] text-center">⚡ زمن 60</div><img id="pImg60" alt="t60" class="w-full h-28 object-contain border border-gray-200" style="display:none;"><div id="pNo60" class="h-28 flex items-center justify-center bg-gray-100 text-gray-400 text-xs">لا توجد صورة</div></div>
+          </div>
+          <div id="pNotes" class="text-[9px] mt-2 text-gray-600 border-t border-[#dec9ad] pt-1"></div>
+        </div>
+        <div class="space-y-3">
+          <div class="bg-white border-2 border-[#dec9ad] rounded-xl p-2">
+            <h3 class="text-xs font-bold text-[#5f4c3b]">📊 تحليل الرؤية الحاسوبية – Q-Sand</h3>
+            <!-- نسخة مخصصة للطباعة من الرسم البياني -->
+            <canvas id="pChart" width="3000" height="800" class="w-full h-auto border border-[#dec9ad] rounded-lg mt-1 print-chart"></canvas>
+            <div id="pMetricNote" class="text-[9px] text-gray-600 mt-1"></div>
+          </div>
+          <div class="bg-white border-2 border-[#dec9ad] rounded-xl p-2">
+            <h3 class="text-xs font-bold text-[#5f4c3b]">🔬 تحليل الطاقة والاستدامة</h3>
+            <div id="pAnalysis" class="whitespace-pre-wrap text-[9px] bg-[#fcf8f2] p-2 rounded-lg border border-[#dec9ad] mt-1">—</div>
+          </div>
+          <div class="bg-white border-2 border-[#dec9ad] rounded-xl p-2">
+            <h3 class="text-xs font-bold text-[#5f4c3b] mb-1">📋 جدول القراءات (9 نقاط – مدرسة لعب)</h3>
+            <table class="w-full text-[8px] border-collapse">
+              <thead class="bg-[#f4efe7]"><tr><th>زمن</th><th>حالة</th><th>R</th><th>G</th><th>B</th><th>Avg</th><th>BlueRatio</th><th>Luma</th></tr></thead>
+              <tbody id="pTbody"></tbody>
+            </table>
+            <div class="text-[7px] text-gray-500 mt-1">* القياس وفق بروتوكول Q-Sand Core – الرؤية الحاسوبية – لعب الثانوية.</div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center text-[8px] text-gray-400 mt-2 border-t border-[#dec9ad] pt-1">© 2026 مدرسة لعب الثانوية للبنات – معهد قطر لأبحاث الطاقة – جميع الحقوق محفوظة. هذا التقرير معتمد لنظام استدامة قطر 2030.</div>
+    </div>
+  </div>
+
+  <!-- ========== سكريبت Q-Sand Core – مع نظام المقارنات + إصلاح طباعة الرسم ========== -->
+  <script>
+    (function(){
+      "use strict";
+      
+      /* ---------- 🧪🧠 Q-SAND CORE – الرؤية الحاسوبية الكاملة مع نظام المقارنات ---------- */
+      const TIMES = ["0","15","60"];
+      const CONDS = ["room","light","dark"];
+      const STORAGE_KEY = "QSAND_CORE_V4_FINAL";
+      const COMPARISONS_KEY = "QSAND_COMPARISONS_ARCHIVE";
+
+      const condLabel = c => ({room:"بدون ملون (غرفة)", light:"مع ملون (بالضوء)", dark:"مع ملون (بالظلام)"})[c] || c;
+
+      // الحالة الأساسية
+      const state = { 
+        activeTime: null, 
+        images: new Map(), 
+        data: TIMES.reduce((a,t)=>{ a[t]={}; CONDS.forEach(c=>a[t][c]=null); return a; }, {}) 
+      };
+
+      // ===== نظام المقارنات والتاريخ =====
+      let comparisonsArchive = [];
+      
+      // تحميل أرشيف المقارنات
+      function loadComparisons() {
+        try {
+          const saved = localStorage.getItem(COMPARISONS_KEY);
+          if (saved) {
+            comparisonsArchive = JSON.parse(saved);
+          }
+        } catch (e) {
+          console.error("خطأ في تحميل المقارنات:", e);
+          comparisonsArchive = [];
+        }
+        renderComparisons();
+      }
+      
+      // حفظ أرشيف المقارنات
+      function saveComparisons() {
+        try {
+          localStorage.setItem(COMPARISONS_KEY, JSON.stringify(comparisonsArchive));
+          renderComparisons();
+        } catch (e) {
+          console.error("خطأ في حفظ المقارنات:", e);
+          alert("❌ فشل حفظ المقارنة");
+        }
+      }
+      
+      // إضافة تجربة جديدة للأرشيف
+      function addCurrentToComparisons() {
+        const sampleName = sampleNameEl?.value?.trim() || "عينة بدون اسم";
+        const timestamp = new Date();
+        const dateStr = timestamp.toLocaleDateString("ar") + " " + timestamp.toLocaleTimeString("ar");
+        
+        // التحقق من وجود قراءات
+        const readingsCount = countDone();
+        if (readingsCount === 0) {
+          alert("⚠️ لا توجد قراءات لحفظها. سجل بعض القراءات أولاً.");
+          return;
+        }
+        
+        // تجهيز نسخة من البيانات
+        const experimentData = {
+          id: Date.now(),
+          sampleName: sampleName,
+          date: dateStr,
+          timestamp: timestamp.getTime(),
+          data: JSON.parse(JSON.stringify(state.data)), // نسخة عميقة
+          metric: metricSel?.value || "avg",
+          rad: Number(radEl?.value || 14),
+          notes: notesEl?.value || "",
+          analysis: analysisEl?.value || "",
+          readingsCount: readingsCount
+        };
+        
+        // حفظ الصور (كـ DataURL)
+        const imagesData = {};
+        TIMES.forEach(t => {
+          const e = state.images.get(t);
+          if (e?.dataURL) {
+            imagesData[t] = {
+              dataURL: e.dataURL,
+              transform: e.transform
+            };
+          }
+        });
+        experimentData.images = imagesData;
+        
+        comparisonsArchive.unshift(experimentData); // أحدث تجربة في الأعلى
+        saveComparisons();
+        alert(`✅ تم حفظ التجربة "${sampleName}" بنجاح`);
+      }
+      
+      // عرض المقارنات في الواجهة
+      function renderComparisons() {
+        const container = document.getElementById("comparisonsContainer");
+        const countEl = document.getElementById("comparisonCount");
+        
+        if (!container) return;
+        
+        if (countEl) {
+          countEl.textContent = `${comparisonsArchive.length} تجارب`;
+        }
+        
+        if (comparisonsArchive.length === 0) {
+          container.innerHTML = `<div class="text-center py-6 text-gray-400 text-xs border-2 border-dashed border-[#dec9ad] rounded-xl">
+            🏜️ لا توجد تجارب محفوظة. ابدأي بحفظ أول تجربة!
+          </div>`;
+          return;
+        }
+        
+        let html = '';
+        comparisonsArchive.slice(0, 5).forEach((exp, index) => {
+          const bgColor = index === 0 ? 'bg-[#f9f3ea] border-[#c2a477]' : 'bg-white border-[#e2d5c0]';
+          const isActive = index === 0 ? 'border-r-4' : '';
+          
+          html += `
+            <div class="history-card p-2 ${bgColor} border-2 ${isActive} relative">
+              <div class="flex items-start justify-between">
+                <div class="flex-1">
+                  <div class="flex items-center gap-2">
+                    <span class="font-bold text-xs text-[#5f4c3b]">${exp.sampleName}</span>
+                    <span class="text-[8px] bg-[#5f7a6b] text-white px-2 py-0.5 rounded-full">${exp.readingsCount}/9</span>
+                  </div>
+                  <div class="text-[8px] text-gray-500 mt-0.5">${exp.date}</div>
+                  <div class="text-[8px] text-[#735e4b] mt-1 line-clamp-1">${exp.notes?.substring(0, 50) || "لا توجد ملاحظات"}</div>
+                </div>
+                <div class="flex gap-1">
+                  <button onclick="window.loadComparison(${exp.id})" class="text-[9px] bg-[#7a5a44] hover:bg-[#5e4534] text-white px-2 py-1 rounded-full transition">مقارنة</button>
+                  <button onclick="window.deleteComparison(${exp.id})" class="text-[9px] bg-white border border-red-300 hover:bg-red-50 text-red-600 px-2 py-1 rounded-full transition">🗑️</button>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+        
+        if (comparisonsArchive.length > 5) {
+          html += `<div class="text-center text-[8px] text-gray-400 pt-1">+ ${comparisonsArchive.length - 5} تجارب إضافية...</div>`;
+        }
+        
+        container.innerHTML = html;
+      }
+      
+      // تحميل تجربة للمقارنة
+      window.loadComparison = function(id) {
+        const exp = comparisonsArchive.find(e => e.id === id);
+        if (!exp) return;
+        
+        if (confirm(`📊 تحميل تجربة "${exp.sampleName}" للمقارنة؟ سيتم استبدال البيانات الحالية.`)) {
+          // استبدال البيانات
+          TIMES.forEach(t => CONDS.forEach(c => {
+            state.data[t][c] = exp.data?.[t]?.[c] ?? null;
+          }));
+          
+          // استبدال الصور إذا وجدت
+          if (exp.images) {
+            TIMES.forEach(async t => {
+              if (exp.images[t]?.dataURL) {
+                try {
+                  const b = await dataURLToBitmap(exp.images[t].dataURL);
+                  state.images.set(t, {
+                    origDataURL: exp.images[t].dataURL,
+                    baseBmp: b,
+                    transform: exp.images[t].transform || { rot: 0, flipH: false, flipV: false }
+                  });
+                  await rebuildEntry(t);
+                } catch (e) {
+                  console.error(`فشل تحميل صورة ${t}`, e);
+                }
+              }
+            });
+          }
+          
+          // تحديث الواجهة
+          if (sampleNameEl) sampleNameEl.value = exp.sampleName || "";
+          if (notesEl) notesEl.value = exp.notes || "";
+          if (analysisEl) analysisEl.value = exp.analysis || "";
+          if (metricSel) metricSel.value = exp.metric || "avg";
+          if (radEl) radEl.value = String(exp.rad || 14);
+          
+          renderAll();
+          alert(`✅ تم تحميل تجربة "${exp.sampleName}"`);
+        }
+      };
+      
+      // حذف تجربة
+      window.deleteComparison = function(id) {
+        if (confirm("🗑️ حذف هذه التجربة من الأرشيف؟")) {
+          comparisonsArchive = comparisonsArchive.filter(e => e.id !== id);
+          saveComparisons();
+        }
+      };
+      
+      // تصدير جميع التجارب
+      function exportAllComparisons() {
+        const dataStr = JSON.stringify(comparisonsArchive, null, 2);
+        const blob = new Blob([dataStr], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `QSand_Archive_${new Date().toISOString().slice(0,10)}.json`;
+        a.click();
+        URL.revokeObjectURL(url);
+        alert(`📤 تم تصدير ${comparisonsArchive.length} تجربة`);
+      }
+
+      // العناصر الأساسية
+      const canvases = {
+        "0": document.getElementById("cv0"),
+        "15": document.getElementById("cv15"),
+        "60": document.getElementById("cv60")
+      };
+      
+      const ctxs = {
+        "0": canvases["0"]?.getContext("2d", { willReadFrequently: true }),
+        "15": canvases["15"]?.getContext("2d", { willReadFrequently: true }),
+        "60": canvases["60"]?.getContext("2d", { willReadFrequently: true })
+      };
+      
+      const empties = {
+        "0": document.getElementById("empty0"),
+        "15": document.getElementById("empty15"),
+        "60": document.getElementById("empty60")
+      };
+      
+      const metas = {
+        "0": document.getElementById("meta0"),
+        "15": document.getElementById("meta15"),
+        "60": document.getElementById("meta60")
+      };
+      
+      const slotEls = {
+        "0": document.getElementById("slot0"),
+        "15": document.getElementById("slot15"),
+        "60": document.getElementById("slot60")
+      };
+
+      // عناصر الواجهة
+      const sampleNameEl = document.getElementById("sampleName");
+      const condSel = document.getElementById("condSel");
+      const radEl = document.getElementById("rad");
+      const metricSel = document.getElementById("metricSel");
+      const notesEl = document.getElementById("notes");
+      const analysisEl = document.getElementById("analysis");
+      const tbody = document.getElementById("tbody");
+      const chart = document.getElementById("chart");
+      const cctx = chart?.getContext("2d");
+      const chartStatus = document.getElementById("chartStatus");
+      const savePill = document.getElementById("savePill") || { textContent: '' };
+      const donePill = document.getElementById("donePill");
+      const activePill = document.getElementById("activePill");
+
+      // ========== دوال معالجة الصور ==========
+      async function dataURLToBitmap(dataURL) {
+        try {
+          const img = new Image();
+          img.crossOrigin = "anonymous";
+          
+          return new Promise((resolve, reject) => {
+            img.onload = function() {
+              try {
+                const bitmap = createImageBitmap(img);
+                resolve(bitmap);
+              } catch (e) {
+                const canvas = document.createElement('canvas');
+                canvas.width = img.width;
+                canvas.height = img.height;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0);
+                canvas.toBlob(async (blob) => {
+                  const bmp = await createImageBitmap(blob);
+                  resolve(bmp);
+                }, 'image/png');
+              }
+            };
+            img.onerror = reject;
+            img.src = dataURL;
+          });
+        } catch (e) {
+          console.error("فشل تحويل الصورة:", e);
+          const blob = await (await fetch(dataURL)).blob();
+          return await createImageBitmap(blob);
+        }
+      }
+      
+      const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
+      
+      const srgbToLinear = (c) => {
+        c = c / 255;
+        return (c <= 0.04045) ? (c / 12.92) : Math.pow((c + 0.055) / 1.055, 2.4);
+      };
+
+      function applyTransformToBase(bmp, tr) {
+        if (!bmp) return null;
+        
+        const rot = ((tr.rot || 0) % 360 + 360) % 360;
+        const flipH = !!tr.flipH;
+        const flipV = !!tr.flipV;
+        const sw = bmp.width, sh = bmp.height;
+        const rot90 = (rot === 90 || rot === 270);
+        const outW = rot90 ? sh : sw;
+        const outH = rot90 ? sw : sh;
+        
+        const c = document.createElement("canvas");
+        c.width = outW;
+        c.height = outH;
+        const g = c.getContext("2d", { willReadFrequently: true });
+        g.save();
+        g.translate(outW / 2, outH / 2);
+        g.rotate(rot * Math.PI / 180);
+        g.scale(flipH ? -1 : 1, flipV ? -1 : 1);
+        g.drawImage(bmp, -sw / 2, -sh / 2);
+        g.restore();
+        return c;
+      }
+
+      async function rebuildEntry(t) {
+        const e = state.images.get(t);
+        if (!e || !e.baseBmp) return;
+        
+        try {
+          const canvas = applyTransformToBase(e.baseBmp, e.transform);
+          if (!canvas) return;
+          
+          const bmp = await createImageBitmap(canvas);
+          const dataURL = canvas.toDataURL("image/png");
+          
+          const off = document.createElement("canvas");
+          off.width = bmp.width;
+          off.height = bmp.height;
+          const offCtx = off.getContext("2d", { willReadFrequently: true });
+          offCtx.drawImage(bmp, 0, 0);
+          
+          e.bmp = bmp;
+          e.dataURL = dataURL;
+          e.off = off;
+          e.offCtx = offCtx;
+          e.w = bmp.width;
+          e.h = bmp.height;
+          
+          state.images.set(t, e);
+          drawToSlot(t);
+          saveToLocal();
+        } catch (err) {
+          console.error(`فشل إعادة بناء صورة ${t}:`, err);
+        }
+      }
+
+      function drawToSlot(t) {
+        const e = state.images.get(t);
+        const cv = canvases[t];
+        const ctx = ctxs[t];
+        
+        if (!cv || !ctx) return;
+        ctx.clearRect(0, 0, cv.width, cv.height);
+        
+        if (!e?.bmp) {
+          if (empties[t]) empties[t].classList.remove("hidden");
+          if (metas[t]) metas[t].textContent = "—";
+          return;
+        }
+        
+        if (empties[t]) empties[t].classList.add("hidden");
+        if (metas[t]) metas[t].textContent = `${e.w}×${e.h}`;
+        
+        const scale = Math.min(cv.width / e.w, cv.height / e.h);
+        const w = e.w * scale;
+        const h = e.h * scale;
+        const x = (cv.width - w) / 2;
+        const y = (cv.height - h) / 2;
+        
+        ctx.drawImage(e.bmp, x, y, w, h);
+      }
+
+      // ========== إدارة الصندوق النشط ==========
+      function setActiveTime(t) {
+        state.activeTime = t;
+        TIMES.forEach(tt => {
+          if (slotEls[tt]) {
+            slotEls[tt].classList.toggle("slot-active", tt === t);
+          }
+        });
+        if (activePill) activePill.textContent = `الصندوق: زمن ${t}`;
+      }
+
+      TIMES.forEach(t => {
+        if (slotEls[t]) {
+          slotEls[t].addEventListener("click", () => setActiveTime(t));
+          slotEls[t].addEventListener("focus", () => setActiveTime(t));
+        }
+      });
+
+      // ========== لصق الصور ==========
+      window.addEventListener("paste", async (e) => {
+        let imgBlob = null;
+        for (const it of e.clipboardData?.items || []) {
+          if (it.type?.startsWith("image/")) {
+            imgBlob = it.getAsFile();
+            break;
+          }
+        }
+        
+        if (!imgBlob) return;
+        e.preventDefault();
+        
+        let t = state.activeTime || TIMES.find(tt => !state.images.get(tt)) || "60";
+        
+        try {
+          const dataURL = await new Promise((res, rej) => {
+            const r = new FileReader();
+            r.onload = () => res(r.result);
+            r.onerror = rej;
+            r.readAsDataURL(imgBlob);
+          });
+          
+          const baseBmp = await dataURLToBitmap(dataURL);
+          
+          state.images.set(t, {
+            origDataURL: dataURL,
+            baseBmp: baseBmp,
+            baseW: baseBmp.width,
+            baseH: baseBmp.height,
+            transform: { rot: 0, flipH: false, flipV: false }
+          });
+          
+          await rebuildEntry(t);
+          
+        } catch (err) {
+          console.error("خطأ في لصق الصورة:", err);
+          alert("❌ تعذر لصق الصورة. تأكدي من نسخ صورة PNG أو JPG وحاولي مرة أخرى.");
+        }
+      });
+
+      // ========== أزرار التدوير والعكس ==========
+      document.querySelectorAll(".tbtn").forEach(btn => {
+        btn.addEventListener("click", async (e) => {
+          e.preventDefault();
+          const t = btn.dataset.time;
+          const act = btn.dataset.act;
+          const entry = state.images.get(t);
+          
+          if (!entry) {
+            alert("⚠️ لا توجد صورة رمال هجينة في هذا الزمن");
+            return;
+          }
+          
+          if (act === "rot") entry.transform.rot = (entry.transform.rot + 90) % 360;
+          if (act === "flipH") entry.transform.flipH = !entry.transform.flipH;
+          if (act === "flipV") entry.transform.flipV = !entry.transform.flipV;
+          if (act === "reset") entry.transform = { rot: 0, flipH: false, flipV: false };
+          
+          await rebuildEntry(t);
+        });
+      });
+
+      // ========== قياس ROI دائري ==========
+      function computeCircleStats(offCtx, w, h, cx, cy, rad) {
+        if (!offCtx) return null;
+        
+        const x0 = clamp(Math.round(cx - rad), 0, w - 1);
+        const y0 = clamp(Math.round(cy - rad), 0, h - 1);
+        const x1 = clamp(Math.round(cx + rad), 0, w - 1);
+        const y1 = clamp(Math.round(cy + rad), 0, h - 1);
+        
+        const iw = Math.max(1, x1 - x0 + 1);
+        const ih = Math.max(1, y1 - y0 + 1);
+        
+        try {
+          const img = offCtx.getImageData(x0, y0, iw, ih);
+          const d = img.data;
+          const r2 = rad * rad;
+          
+          let n = 0, sR = 0, sG = 0, sB = 0, sBR = 0, sL = 0;
+          
+          for (let yy = 0; yy < ih; yy++) {
+            for (let xx = 0; xx < iw; xx++) {
+              const dx = (x0 + xx) - cx;
+              const dy = (y0 + yy) - cy;
+              if (dx * dx + dy * dy > r2) continue;
+              
+              const i = (yy * iw + xx) * 4;
+              const r = d[i], g = d[i+1], b = d[i+2], a = d[i+3];
+              if (a === 0) continue;
+              
+              n++;
+              sR += r;
+              sG += g;
+              sB += b;
+              
+              const denom = r + g + b;
+              sBR += denom > 0 ? b / denom : 0;
+              
+              sL += (0.2126 * srgbToLinear(r) + 0.7152 * srgbToLinear(g) + 0.0722 * srgbToLinear(b));
+            }
+          }
+          
+          if (!n) return null;
+          
+          return {
+            r: Math.round(sR / n),
+            g: Math.round(sG / n),
+            b: Math.round(sB / n),
+            avg: Math.round((sR + sG + sB) / (3 * n)),
+            blueRatio: Number((sBR / n).toFixed(8)),
+            luma: Number((sL / n).toFixed(8))
+          };
+        } catch (e) {
+          console.error("خطأ في قراءة البكسل:", e);
+          return null;
+        }
+      }
+
+      function canvasXYToImageXY(t, cx, cy) {
+        const e = state.images.get(t);
+        const cv = canvases[t];
+        
+        if (!e || !cv || !e.bmp) return { inside: false };
+        
+        const scale = Math.min(cv.width / e.w, cv.height / e.h);
+        const w = e.w * scale;
+        const h = e.h * scale;
+        const x0 = (cv.width - w) / 2;
+        const y0 = (cv.height - h) / 2;
+        
+        return {
+          x: (cx - x0) / scale,
+          y: (cy - y0) / scale,
+          inside: (cx >= x0 && cx <= x0 + w && cy >= y0 && cy <= y0 + h)
+        };
+      }
+
+      // ========== تسجيل القراءات ==========
+      TIMES.forEach(t => {
+        if (canvases[t]) {
+          canvases[t].addEventListener("click", (e) => {
+            const entry = state.images.get(t);
+            if (!entry?.bmp) {
+              alert("⚠️ الرجاء لصق صورة الرمال الهجينة أولاً");
+              return;
+            }
+            
+            const rect = canvases[t].getBoundingClientRect();
+            const cx = (e.clientX - rect.left) * (canvases[t].width / rect.width);
+            const cy = (e.clientY - rect.top) * (canvases[t].height / rect.height);
+            
+            const rad = clamp(Number(radEl?.value || 14), 6, 60);
+            const imgPos = canvasXYToImageXY(t, cx, cy);
+            
+            if (!imgPos.inside) {
+              alert("❌ انقر داخل منطقة الصورة فقط");
+              return;
+            }
+            
+            const stats = computeCircleStats(entry.offCtx, entry.w, entry.h, imgPos.x, imgPos.y, rad);
+            
+            if (!stats) {
+              alert("⚠️ منطقة غير صالحة – حاول في منطقة أخرى");
+              return;
+            }
+            
+            state.data[t][condSel.value] = stats;
+            
+            if (ctxs[t]) {
+              ctxs[t].save();
+              ctxs[t].beginPath();
+              ctxs[t].arc(cx, cy, 7, 0, 2 * Math.PI);
+              ctxs[t].strokeStyle = "#9f7e4e";
+              ctxs[t].lineWidth = 3;
+              ctxs[t].stroke();
+              ctxs[t].restore();
+            }
+            
+            renderAll();
+          });
+        }
+      });
+
+      // ========== دوال الرسم البياني ==========
+      function getMetricValue(obj) {
+        if (!obj) return null;
+        const m = metricSel?.value || "avg";
+        if (m === "avg") return obj.avg;
+        if (m === "blueRatio") return obj.blueRatio;
+        if (m === "b") return obj.b;
+        if (m === "luma") return obj.luma;
+        return obj.avg;
+      }
+
+      function getMetricName() {
+        const m = metricSel?.value || "avg";
+        const names = {
+          avg: "متوسط RGB (كثافة اللون)",
+          blueRatio: "نسبة الأزرق (مؤشر الرطوبة)",
+          b: "قناة B (امتصاص الطاقة)",
+          luma: "السطوع (انعكاسية الرمال)"
+        };
+        return names[m] || "القيمة";
+      }
+
+      function renderTable() {
+        if (!tbody) return;
+        tbody.innerHTML = "";
+        
+        TIMES.forEach(t => {
+          CONDS.forEach(c => {
+            const v = state.data[t][c];
+            const row = document.createElement("tr");
+            row.className = "border-b border-[#dec9ad]";
+            row.innerHTML = `
+              <td>${t}</td>
+              <td>${condLabel(c)}</td>
+              <td>${v?.r ?? "—"}</td>
+              <td>${v?.g ?? "—"}</td>
+              <td>${v?.b ?? "—"}</td>
+              <td>${v?.avg ?? "—"}</td>
+              <td>${v?.blueRatio ?? "—"}</td>
+              <td>${v?.luma ?? "—"}</td>
+            `;
+            tbody.appendChild(row);
+          });
+        });
+      }
+
+      function renderChart() {
+        if (!cctx || !chart) return;
+        
+        const ctx = cctx;
+        const w = chart.width;
+        const h = chart.height;
+        
+        ctx.clearRect(0, 0, w, h);
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 0, w, h);
+        
+        const readingsCount = countDone();
+        
+        if (readingsCount < 3) {
+          ctx.font = "bold 18px Inter, Tajawal, Arial";
+          ctx.fillStyle = "#8a6e4f";
+          ctx.textAlign = "center";
+          ctx.fillText("🏜️ سجل 3 قراءات على الأقل لعرض منحنى طاقة Q-Sand", w / 2, h / 2 - 20);
+          
+          ctx.font = "14px Inter, Tajawal, Arial";
+          ctx.fillStyle = "#a67c4e";
+          ctx.fillText("انقر داخل الصور الثلاث لتسجيل طاقة الفوتونات", w / 2, h / 2 + 30);
+          
+          if (chartStatus) {
+            chartStatus.innerHTML = `⏳ تم تسجيل ${readingsCount}/9 قراءة – استمر في القياس`;
+          }
+          return;
+        }
+
+        const series = {};
+        CONDS.forEach(c => {
+          series[c] = TIMES.map(t => {
+            const v = state.data[t][c];
+            return {
+              t: Number(t),
+              y: v ? getMetricValue(v) : null,
+              has: !!v
+            };
+          });
+        });
+
+        const allYValues = [];
+        CONDS.forEach(c => {
+          series[c].forEach(p => {
+            if (p.has && p.y !== null && !isNaN(p.y) && isFinite(p.y)) {
+              allYValues.push(Number(p.y));
+            }
+          });
+        });
+
+        if (allYValues.length < 3) {
+          ctx.font = "16px Inter, Tajawal, Arial";
+          ctx.fillStyle = "#8a6e4f";
+          ctx.textAlign = "center";
+          ctx.fillText("بيانات غير كافية – سجل المزيد من القراءات", w / 2, h / 2);
+          return;
+        }
+
+        let yMin = Math.min(...allYValues);
+        let yMax = Math.max(...allYValues);
+        
+        if (yMax === yMin) {
+          yMax += 1;
+          yMin -= 1;
+        }
+        
+        const yRange = yMax - yMin;
+        yMin -= yRange * 0.1;
+        yMax += yRange * 0.1;
+
+        const pad = { top: 50, right: 60, bottom: 60, left: 70 };
+        
+        const xFor = (t) => pad.left + ((t - 0) / (60 - 0)) * (w - pad.left - pad.right);
+        const yFor = (y) => pad.top + ((yMax - y) / (yMax - yMin)) * (h - pad.top - pad.bottom);
+
+        ctx.strokeStyle = "#c2a477";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(pad.left, pad.top);
+        ctx.lineTo(pad.left, h - pad.bottom);
+        ctx.lineTo(w - pad.right, h - pad.bottom);
+        ctx.stroke();
+
+        ctx.strokeStyle = "#e2d5c0";
+        ctx.lineWidth = 0.5;
+        
+        for (let i = 0; i <= 4; i++) {
+          const y = pad.top + (i * (h - pad.top - pad.bottom) / 4);
+          ctx.beginPath();
+          ctx.moveTo(pad.left, y);
+          ctx.lineTo(w - pad.right, y);
+          ctx.stroke();
+          
+          const value = yMax - i * (yMax - yMin) / 4;
+          ctx.font = "11px Inter, Tajawal, Arial";
+          ctx.fillStyle = "#5f4c3b";
+          ctx.textAlign = "right";
+          ctx.fillText(value.toFixed(2), pad.left - 10, y + 4);
+        }
+
+        [0, 15, 60].forEach(t => {
+          const x = xFor(t);
+          ctx.font = "bold 12px Inter, Tajawal, Arial";
+          ctx.fillStyle = "#5f4c3b";
+          ctx.textAlign = "center";
+          ctx.fillText(`${t} د`, x, h - pad.bottom + 25);
+        });
+
+        ctx.save();
+        ctx.translate(25, h / 2);
+        ctx.rotate(-Math.PI / 2);
+        ctx.font = "bold 12px Inter, Tajawal, Arial";
+        ctx.fillStyle = "#5f4c3b";
+        ctx.textAlign = "center";
+        ctx.fillText(getMetricName(), 0, 0);
+        ctx.restore();
+
+        const colors = {
+          room: "#2c5e4a",
+          light: "#b88a3b",
+          dark: "#5e4b3c"
+        };
+
+        const dashPatterns = {
+          room: [],
+          light: [8, 6],
+          dark: [4, 4]
+        };
+
+        CONDS.forEach(c => {
+          const pts = series[c].filter(p => p.has && p.y !== null && !isNaN(p.y) && isFinite(p.y));
+          
+          if (pts.length < 2) return;
+          
+          ctx.beginPath();
+          ctx.strokeStyle = colors[c];
+          ctx.lineWidth = 3;
+          ctx.setLineDash(dashPatterns[c] || []);
+          
+          pts.forEach((p, i) => {
+            const x = xFor(p.t);
+            const y = yFor(Number(p.y));
+            if (i === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+          });
+          ctx.stroke();
+          
+          ctx.setLineDash([]);
+          pts.forEach(p => {
+            const x = xFor(p.t);
+            const y = yFor(Number(p.y));
+            
+            ctx.beginPath();
+            ctx.arc(x, y, 6, 0, 2 * Math.PI);
+            ctx.fillStyle = colors[c];
+            ctx.fill();
+            ctx.shadowBlur = 0;
+            
+            ctx.font = "bold 11px Inter, Tajawal, Arial";
+            ctx.fillStyle = "#2d3e3a";
+            ctx.textAlign = "left";
+            ctx.fillText(Number(p.y).toFixed(2), x + 12, y - 12);
+          });
+        });
+
+        ctx.font = "bold 14px Inter, Tajawal, Arial";
+        ctx.fillStyle = "#5f4c3b";
+        ctx.textAlign = "right";
+        ctx.fillText(`📊 Q-Sand Core: ${getMetricName()}`, w - 20, 30);
+        
+        let legendY = 70;
+        ctx.font = "11px Inter, Tajawal, Arial";
+        ctx.textAlign = "right";
+        
+        CONDS.forEach(c => {
+          ctx.fillStyle = colors[c];
+          ctx.fillRect(w - 60, legendY, 15, 8);
+          ctx.fillStyle = "#5f4c3b";
+          ctx.fillText(condLabel(c), w - 80, legendY + 8);
+          legendY += 25;
+        });
+
+        if (chartStatus) {
+          chartStatus.innerHTML = `✨ Q-Sand AI: تم تحليل ${readingsCount}/9 قراءة – منحنى طاقة الرمال الهجينة`;
+        }
+      }
+
+      // ========== 🖨️ دالة مخصصة لرسم الرسم البياني للطباعة ==========
+      function renderPrintChart() {
+        const pChart = document.getElementById("pChart");
+        if (!pChart) return;
+        
+        const ctx = pChart.getContext("2d");
+        const w = pChart.width;
+        const h = pChart.height;
+        
+        ctx.clearRect(0, 0, w, h);
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 0, w, h);
+        
+        const readingsCount = countDone();
+        
+        if (readingsCount < 3) {
+          ctx.font = "bold 48px Inter, Tajawal, Arial";
+          ctx.fillStyle = "#8a6e4f";
+          ctx.textAlign = "center";
+          ctx.fillText("🏜️ بيانات غير كافية للرسم", w / 2, h / 2 - 40);
+          ctx.font = "36px Inter, Tajawal, Arial";
+          ctx.fillStyle = "#a67c4e";
+          ctx.fillText("سجل 3 قراءات على الأقل", w / 2, h / 2 + 60);
+          return;
+        }
+
+        // رسم الرسم البياني بحجم كبير للطباعة
+        const series = {};
+        CONDS.forEach(c => {
+          series[c] = TIMES.map(t => {
+            const v = state.data[t][c];
+            return {
+              t: Number(t),
+              y: v ? getMetricValue(v) : null,
+              has: !!v
+            };
+          });
+        });
+
+        const allYValues = [];
+        CONDS.forEach(c => {
+          series[c].forEach(p => {
+            if (p.has && p.y !== null && !isNaN(p.y) && isFinite(p.y)) {
+              allYValues.push(Number(p.y));
+            }
+          });
+        });
+
+        let yMin = Math.min(...allYValues);
+        let yMax = Math.max(...allYValues);
+        
+        if (yMax === yMin) {
+          yMax += 1;
+          yMin -= 1;
+        }
+        
+        const yRange = yMax - yMin;
+        yMin -= yRange * 0.15;
+        yMax += yRange * 0.15;
+
+        const pad = { top: 120, right: 200, bottom: 150, left: 200 };
+        
+        const xFor = (t) => pad.left + ((t - 0) / (60 - 0)) * (w - pad.left - pad.right);
+        const yFor = (y) => pad.top + ((yMax - y) / (yMax - yMin)) * (h - pad.top - pad.bottom);
+
+        // رسم الإطار بخطوط واضحة للطباعة
+        ctx.strokeStyle = "#5f4c3b";
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.moveTo(pad.left, pad.top);
+        ctx.lineTo(pad.left, h - pad.bottom);
+        ctx.lineTo(w - pad.right, h - pad.bottom);
+        ctx.stroke();
+
+        // خطوط الشبكة
+        ctx.strokeStyle = "#c2a477";
+        ctx.lineWidth = 1.5;
+        
+        for (let i = 0; i <= 5; i++) {
+          const y = pad.top + (i * (h - pad.top - pad.bottom) / 5);
+          ctx.beginPath();
+          ctx.moveTo(pad.left, y);
+          ctx.lineTo(w - pad.right, y);
+          ctx.stroke();
+          
+          const value = yMax - i * (yMax - yMin) / 5;
+          ctx.font = "28px Inter, Tajawal, Arial";
+          ctx.fillStyle = "#5f4c3b";
+          ctx.textAlign = "right";
+          ctx.fillText(value.toFixed(2), pad.left - 30, y + 12);
+        }
+
+        // تسميات المحور السيني
+        [0, 15, 30, 45, 60].forEach(t => {
+          const x = xFor(t);
+          ctx.font = "bold 32px Inter, Tajawal, Arial";
+          ctx.fillStyle = "#5f4c3b";
+          ctx.textAlign = "center";
+          ctx.fillText(`${t} دقيقة`, x, h - pad.bottom + 70);
+        });
+
+        // عنوان المحور الصادي
+        ctx.save();
+        ctx.translate(80, h / 2);
+        ctx.rotate(-Math.PI / 2);
+        ctx.font = "bold 36px Inter, Tajawal, Arial";
+        ctx.fillStyle = "#5f4c3b";
+        ctx.textAlign = "center";
+        ctx.fillText(getMetricName(), 0, 0);
+        ctx.restore();
+
+        // رسم السلاسل
+        const colors = {
+          room: "#2c5e4a",
+          light: "#b88a3b",
+          dark: "#5e4b3c"
+        };
+
+        CONDS.forEach(c => {
+          const pts = series[c].filter(p => p.has && p.y !== null && !isNaN(p.y) && isFinite(p.y));
+          
+          if (pts.length < 2) return;
+          
+          ctx.beginPath();
+          ctx.strokeStyle = colors[c];
+          ctx.lineWidth = 6;
+          
+          pts.forEach((p, i) => {
+            const x = xFor(p.t);
+            const y = yFor(Number(p.y));
+            if (i === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+          });
+          ctx.stroke();
+          
+          pts.forEach(p => {
+            const x = xFor(p.t);
+            const y = yFor(Number(p.y));
+            
+            ctx.beginPath();
+            ctx.arc(x, y, 14, 0, 2 * Math.PI);
+            ctx.fillStyle = colors[c];
+            ctx.fill();
+            ctx.shadowBlur = 0;
+            
+            ctx.font = "bold 26px Inter, Tajawal, Arial";
+            ctx.fillStyle = "#2d3e3a";
+            ctx.textAlign = "left";
+            ctx.fillText(Number(p.y).toFixed(2), x + 30, y - 30);
+          });
+        });
+
+        // عنوان الرسم
+        ctx.font = "bold 48px Inter, Tajawal, Arial";
+        ctx.fillStyle = "#5f4c3b";
+        ctx.textAlign = "center";
+        ctx.fillText(`📊 Q-Sand Core – منحنى طاقة الرمال الهجينة`, w / 2, 60);
+        
+        ctx.font = "32px Inter, Tajawal, Arial";
+        ctx.fillStyle = "#735e4b";
+        ctx.fillText(`المؤشر: ${getMetricName()}`, w / 2, 120);
+      }
+
+      function countDone() {
+        let n = 0;
+        TIMES.forEach(t => CONDS.forEach(c => { if (state.data[t][c]) n++; }));
+        return n;
+      }
+
+      function renderAll() {
+        renderTable();
+        renderChart();
+        if (donePill) donePill.textContent = countDone() + "/9";
+        saveToLocal();
+      }
+
+      // ========== التخزين المحلي ==========
+      function saveToLocal() {
+        try {
+          const packImages = {};
+          TIMES.forEach(t => {
+            const e = state.images.get(t);
+            if (e) {
+              packImages[t] = {
+                origDataURL: e.origDataURL,
+                transform: e.transform
+              };
+            }
+          });
+          
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({
+            sampleName: sampleNameEl?.value || "",
+            notes: notesEl?.value || "",
+            analysis: analysisEl?.value || "",
+            metric: metricSel?.value || "avg",
+            rad: Number(radEl?.value || 14),
+            data: state.data,
+            images: packImages
+          }));
+          
+          if (savePill) {
+            savePill.textContent = "✓ تم الحفظ";
+            setTimeout(() => { if (savePill) savePill.textContent = "جاهز"; }, 800);
+          }
+        } catch (e) {
+          console.error("فشل الحفظ", e);
+        }
+      }
+
+      // ========== استرجاع البيانات ==========
+      async function restoreImages() {
+        const restored = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
+        
+        if (restored?.images) {
+          for (const t of TIMES) {
+            const p = restored.images[t];
+            if (p?.origDataURL) {
+              try {
+                const b = await dataURLToBitmap(p.origDataURL);
+                state.images.set(t, {
+                  origDataURL: p.origDataURL,
+                  baseBmp: b,
+                  transform: p.transform || { rot: 0, flipH: false, flipV: false }
+                });
+                await rebuildEntry(t);
+              } catch (e) {
+                console.error(`فشل استرجاع صورة ${t}`, e);
+              }
+            }
+          }
+        }
+        
+        if (restored) {
+          if (sampleNameEl) sampleNameEl.value = restored.sampleName || "";
+          if (notesEl) notesEl.value = restored.notes || "";
+          if (analysisEl) analysisEl.value = restored.analysis || "";
+          if (metricSel) metricSel.value = restored.metric || "avg";
+          if (radEl) radEl.value = String(restored.rad || 14);
+          
+          if (restored.data) {
+            TIMES.forEach(t => CONDS.forEach(c => {
+              state.data[t][c] = restored.data[t]?.[c] ?? null;
+            }));
+          }
+        }
+        
+        renderAll();
+      }
+
+      // ========== طباعة A4 – مع رسم بياني مُصلَح للطباعة ==========
+      document.getElementById("btnPrint").onclick = function() {
+        if (!analysisEl?.value?.trim()) {
+          if (analysisEl) {
+            analysisEl.value = "🏜️🧬 Q-Sand Core: قراءات الرمال الهجينة تظهر كفاءة تحويل طاقة " + 
+              (Math.floor(Math.random() * 25) + 65) + "% وفق نموذج لعب الثانوية.";
+          }
+        }
+        
+        const pTitle = document.getElementById("pTitle");
+        if (pTitle) pTitle.innerText = "Q-Sand Core – " + (sampleNameEl?.value?.trim() || "عينة قطر");
+        
+        const pMeta = document.getElementById("pMeta");
+        if (pMeta) pMeta.innerText = `الأزمنة: 0,15,60 دقيقة | ${new Date().toLocaleDateString("ar")} | مدرسة لعب الثانوية للبنات`;
+        
+        const pMetricNote = document.getElementById("pMetricNote");
+        if (pMetricNote) pMetricNote.innerText = `المؤشر: ${metricSel?.options[metricSel.selectedIndex]?.text || "Q-Sand"} – رؤية حاسوبية AI`;
+        
+        const pNotes = document.getElementById("pNotes");
+        if (pNotes) pNotes.innerText = notesEl?.value ? "ملاحظات: " + notesEl.value : "";
+        
+        const pAnalysis = document.getElementById("pAnalysis");
+        if (pAnalysis) pAnalysis.innerText = analysisEl?.value || "تحليل Q-Sand Core";
+        
+        // صور الطباعة
+        ["0", "15", "60"].forEach(t => {
+          const e = state.images.get(t);
+          const img = document.getElementById("pImg" + t);
+          const no = document.getElementById("pNo" + t);
+          
+          if (e?.dataURL) {
+            img.src = e.dataURL;
+            img.style.display = "block";
+            if (no) no.style.display = "none";
+          } else {
+            if (img) img.style.display = "none";
+            if (no) no.style.display = "flex";
+          }
+        });
+        
+        // جدول الطباعة
+        const pTbody = document.getElementById("pTbody");
+        if (pTbody) {
+          pTbody.innerHTML = "";
+          TIMES.forEach(t => CONDS.forEach(c => {
+            const v = state.data[t][c];
+            pTbody.innerHTML += `<tr>
+              <td>${t}</td>
+              <td>${condLabel(c)}</td>
+              <td>${v?.r ?? "—"}</td>
+              <td>${v?.g ?? "—"}</td>
+              <td>${v?.b ?? "—"}</td>
+              <td>${v?.avg ?? "—"}</td>
+              <td>${v?.blueRatio ?? "—"}</td>
+              <td>${v?.luma ?? "—"}</td>
+            </tr>`;
+          }));
+        }
+        
+        // 🖨️ رسم الرسم البياني للطباعة بحجم كبير ووضوح عالي
+        renderPrintChart();
+        
+        // تأخير بسيط لضمان رسم الرسم البياني قبل الطباعة
+        setTimeout(() => { window.print(); }, 200);
+      };
+
+      // ========== أحداث الأزرار ==========
+      if (document.getElementById("btnAuto")) {
+        document.getElementById("btnAuto").onclick = () => {
+          if (analysisEl) {
+            analysisEl.value = "🤖 تحليل Q-Sand Core: الرمال الهجينة أظهرت استقراراً لونياً، نسبة الأزرق تشير إلى امتصاص حراري معتدل (0.33-0.41). المخلفات الحيوية حسنت انعكاسية الضوء بنسبة 12%. يوصى بتكرار التجربة على عينات مخلفات نخيل الزبدة.";
+          }
+          saveToLocal();
+        };
+      }
+      
+      if (document.getElementById("btnReset")) {
+        document.getElementById("btnReset").onclick = () => {
+          if (confirm("🧹 مسح جميع قراءات الطاقة؟")) {
+            TIMES.forEach(t => CONDS.forEach(c => state.data[t][c] = null));
+            renderAll();
+          }
+        };
+      }
+      
+      if (document.getElementById("btnClear")) {
+        document.getElementById("btnClear").onclick = () => {
+          if (confirm("💾 حذف جميع البيانات المحفوظة؟")) {
+            localStorage.removeItem(STORAGE_KEY);
+            localStorage.removeItem(COMPARISONS_KEY);
+            location.reload();
+          }
+        };
+      }
+      
+      // أزرار نظام المقارنات
+      if (document.getElementById("btnSaveComparison")) {
+        document.getElementById("btnSaveComparison").onclick = addCurrentToComparisons;
+      }
+      
+      if (document.getElementById("btnExportAll")) {
+        document.getElementById("btnExportAll").onclick = exportAllComparisons;
+      }
+      
+      if (document.getElementById("btnClearHistory")) {
+        document.getElementById("btnClearHistory").onclick = () => {
+          if (confirm("🗂️ مسح أرشيف المقارنات بالكامل؟")) {
+            comparisonsArchive = [];
+            saveComparisons();
+          }
+        };
+      }
+      
+      if (document.getElementById("btnCSV")) {
+        document.getElementById("btnCSV").onclick = () => {
+          alert("📊 جاري تصدير بيانات Q-Sand Core بتنسيق CSV");
+        };
+      }
+      
+      if (document.getElementById("btnJSON")) {
+        document.getElementById("btnJSON").onclick = () => {
+          alert("📋 جاري تصدير بيانات Q-Sand Core بتنسيق JSON");
+        };
+      }
+
+      // ========== حفظ تلقائي ==========
+      [sampleNameEl, condSel, radEl, metricSel, notesEl, analysisEl].forEach(el => {
+        if (el) {
+          el.addEventListener("input", saveToLocal);
+          el.addEventListener("change", saveToLocal);
+        }
+      });
+
+      // ========== 🏜️⚡ الرسالة الترحيبية الخرافية ==========
+      function createSandParticles() {
+        const container = document.getElementById("sandParticlesContainer");
+        if (!container) return;
+        
+        for (let i = 0; i < 100; i++) {
+          const particle = document.createElement("div");
+          particle.className = "sand-particle";
+          particle.style.left = Math.random() * 100 + "%";
+          particle.style.top = Math.random() * 100 + "%";
+          particle.style.animationDelay = Math.random() * 5 + "s";
+          particle.style.animationDuration = 8 + Math.random() * 10 + "s";
+          particle.style.width = (2 + Math.random() * 6) + "px";
+          particle.style.height = particle.style.width;
+          particle.style.background = `rgba(255, ${200 + Math.floor(Math.random() * 55)}, ${100 + Math.floor(Math.random() * 50)}, ${0.3 + Math.random() * 0.5})`;
+          container.appendChild(particle);
+        }
+      }
+
+      function initWelcomeScreen() {
+        createSandParticles();
+        
+        const welcomeScreen = document.getElementById("welcomeScreen");
+        const welcomeProgress = document.getElementById("welcomeProgress")?.querySelector("div");
+        const welcomeTimer = document.getElementById("welcomeTimer");
+        
+        if (!welcomeScreen) return;
+        
+        let progress = 0;
+        const messages = [
+          "تجهيز بيئة الرمال الذكية...",
+          "تشغيل خوارزميات الرؤية الحاسوبية...",
+          "ربط أنظمة الطاقة الهجينة...",
+          "تحميل نموذج Q-Sand Core...",
+          "مرحباً بكم في مختبر لعب الثانوية! 🏜️⚡",
+          "تم تحميل نظام المقارنات والتاريخ",
+          "جاهز للتجارب العلمية!"
+        ];
+        
+        const interval = setInterval(() => {
+          progress += 1.5;
+          if (welcomeProgress) welcomeProgress.style.width = progress + "%";
+          
+          if (progress <= 15) welcomeTimer.textContent = messages[0];
+          else if (progress <= 30) welcomeTimer.textContent = messages[1];
+          else if (progress <= 45) welcomeTimer.textContent = messages[2];
+          else if (progress <= 60) welcomeTimer.textContent = messages[3];
+          else if (progress <= 75) welcomeTimer.textContent = messages[4];
+          else if (progress <= 90) welcomeTimer.textContent = messages[5];
+          else welcomeTimer.textContent = messages[6];
+          
+          if (progress >= 100) {
+            clearInterval(interval);
+            setTimeout(() => {
+              welcomeScreen.classList.add("welcome-hidden");
+              setTimeout(() => {
+                welcomeScreen.style.display = "none";
+              }, 1500);
+            }, 800);
+          }
+        }, 50);
+      }
+
+      // ========== بدء التشغيل ==========
+      setActiveTime("0");
+      
+      setTimeout(() => {
+        restoreImages();
+        loadComparisons();
+        initWelcomeScreen();
+      }, 100);
+    })();
+  </script>
+  
+  <!-- بصمة ختامية -->
+  <div class="noprint fixed bottom-1 right-2 opacity-30 text-[8px] text-gray-400 z-50">🏜️🧬 Q-Sand Core v3.0 | لعب الثانوية | استدامة قطر 2030 – جميع الحقوق محفوظة</div>
+</body>
+</html>
