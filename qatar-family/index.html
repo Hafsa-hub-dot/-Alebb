@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="theme-color" content="#791536"/><title>مفاجأة لأولياء الأمور | رحلة في قلب قطر</title>
+<link href="https://fonts.googleapis.com/css2?family=Marhey:wght@400;500;600;700&family=Markazi+Text:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#7b1739;--wine2:#4e0b26;--gold:#c79b4a;--ivory:#fcf8f0;--ink:#25202a;--muted:#6c6269;--green:#157958;--edge:#e9dcca;--shadow:0 18px 50px #3b142624}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#fbf6ed;color:var(--ink);font-family:'Markazi Text','Tajawal',serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.3;background-image:radial-gradient(#c9ad7f 1px,transparent 1px);background-size:24px 24px}
+button,input,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.47;cursor:not-allowed}
+.top{min-height:70px;padding:12px max(22px,calc((100vw - 1050px)/2));display:flex;align-items:center;justify-content:space-between;gap:15px;background:linear-gradient(105deg,var(--wine2),var(--wine));color:white;border-bottom:4px solid var(--gold)}
+.brand{display:flex;align-items:center;gap:12px}.brand .flag{font-size:38px}.brand b{font-family:'Marhey','Markazi Text',serif;font-size:30px;line-height:1}.brand small{font-size:13px;color:#f4d8df}.top .tag{border:1px solid #ffffff55;padding:9px 13px;border-radius:30px;color:#ffedc4;font-size:14px}
+main{max-width:1050px;margin:auto;padding:28px 20px 65px}.hidden{display:none!important}.panel{background:#fffefa;border:1px solid var(--edge);box-shadow:var(--shadow);border-radius:28px;overflow:hidden;position:relative}.panel:before{content:"";position:absolute;inset:0 auto 0 0;width:8px;background:linear-gradient(var(--gold),var(--wine));z-index:1}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;min-height:530px}.heroText{padding:55px 47px;display:flex;flex-direction:column;justify-content:center}.eyebrow{font-weight:800;color:var(--wine);letter-spacing:.3px}.hero h1{font-family:'Marhey','Markazi Text',serif;color:var(--wine2);font-size:clamp(54px,7vw,84px);line-height:.98;margin:18px 0}.hero p{font-size:21px;line-height:1.55;color:#5e5358;margin:0 0 26px}.art{position:relative;background:radial-gradient(circle at 50% 30%,#aa4163,#68102d 65%,#450b22);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff0d4;text-align:center;overflow:hidden;padding:30px}.art:after{content:"";position:absolute;bottom:-90px;width:450px;height:240px;border:2px solid #dec08a66;border-radius:50%}.art .big{font-size:clamp(85px,13vw,158px);filter:drop-shadow(0 12px 15px #21000c60);z-index:1}.art .skyline{font-size:47px;letter-spacing:10px;z-index:1}.art strong{font-family:'Marhey','Markazi Text',serif;font-size:33px;z-index:1}.art .spark{position:absolute;color:#f7d58d;font-size:28px;animation:float 4s ease-in-out infinite}.art .s1{top:12%;right:13%}.art .s2{bottom:19%;left:13%;animation-delay:1s}.art .s3{top:30%;left:17%;animation-delay:2s}@keyframes float{50%{transform:translateY(-12px) rotate(10deg)}}
+.btn{border:0;border-radius:15px;background:var(--wine);color:white;font-weight:800;min-height:53px;padding:12px 30px;box-shadow:0 7px 0 #4a0922;transition:.15s;font-size:19px}.btn:hover{transform:translateY(-2px)}.btn:active{transform:translateY(4px);box-shadow:0 3px 0 #4a0922}.btn.secondary{background:white;color:var(--wine);box-shadow:none;border:2px solid #d9b8c4}.btn.gold{background:#c0903e;color:#281608;box-shadow:0 6px 0 #96702f}.btnRow{display:flex;flex-wrap:wrap;gap:12px}.mini{color:#71646c;font-size:14px;margin-top:18px}
+.introForm{max-width:780px;margin:auto;padding:35px 40px}.introForm h2,.report h2{font-family:'Marhey','Markazi Text',serif;font-size:49px;color:var(--wine);margin:0 0 4px}.introForm p{color:#6a5b63;line-height:1.6}.fields{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}.field label{font-weight:800;display:block;margin-bottom:8px}.field input,.field select{width:100%;padding:14px 16px;border:2px solid #e9d9dd;background:#fff;border-radius:13px;outline:none;font-size:18px;color:#30222a}.field input:focus,.field select:focus{border-color:var(--wine)}.field.grade{grid-column:span 2}.consent{display:flex;align-items:flex-start;gap:10px;margin:24px 0;background:#f8f1e7;border-radius:12px;padding:15px;line-height:1.6}.consent input{width:20px;height:20px;flex:0 0 20px;accent-color:var(--wine);margin-top:2px}.warning{color:#8d213d;font-size:14px;margin-top:12px}
+.game{max-width:850px;margin:auto}.progressTop{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:12px}.progressTop b{color:var(--wine);font-size:18px}.progressTop .num{font-size:18px;font-weight:800}.track{height:12px;border-radius:50px;background:#e6d9d6;overflow:hidden;margin-bottom:22px}.fill{height:100%;width:0;background:linear-gradient(90deg,#aa3156,var(--gold));transition:width .4s}
+.qcard{background:#fffdfa;border-radius:26px;border:1px solid #e8d3c6;overflow:hidden;box-shadow:var(--shadow);animation:rise .38s ease both}@keyframes rise{from{opacity:.2;transform:translateY(13px)}to{opacity:1;transform:translateY(0)}}
+.qbanner{min-height:205px;padding:27px 35px;background:linear-gradient(125deg,#781637,#a64665);color:white;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:15px}.qbanner:before{content:"";position:absolute;inset:-100px 40% -50px -40px;border:35px double #ffffff1c;border-radius:50%}.qbanner.t1{background:linear-gradient(125deg,#5c102d,#9b3559)}.qbanner.t2{background:linear-gradient(125deg,#66132c,#a16639)}.qbanner.t3{background:linear-gradient(125deg,#6b1642,#b24f74)}.qbanner.t4{background:linear-gradient(125deg,#541129,#934c3a)}.qbanner.t5{background:linear-gradient(125deg,#63223b,#9f5072)}.sectionName{font-size:16px;color:#ffe6b4;font-weight:800}.qbanner h2{font-family:'Marhey','Markazi Text',serif;font-size:38px;line-height:1.05;margin:11px 0 0;position:relative}.symbol{font-size:90px;position:relative;filter:drop-shadow(0 7px 7px #32051b77);animation:float 4s ease-in-out infinite}.qbody{padding:31px 36px 37px}.qtext{font-family:'Marhey','Markazi Text',serif;font-size:39px;line-height:1.13;margin:4px 0 24px;color:#301921}.options{display:grid;gap:12px}.option{border:2px solid #e7dadd;background:white;border-radius:15px;padding:15px 18px;text-align:right;color:#38282e;font-weight:700;font-size:20px;display:flex;align-items:center;gap:15px;transition:.2s;min-height:66px}.option:hover{border-color:#b96782;background:#fdf6f7}.option .letter{display:grid;place-items:center;flex:0 0 38px;height:38px;background:#f5e9ec;border-radius:10px;color:var(--wine);font-size:20px}.option.picked{border-color:var(--wine);background:#fff2f6;box-shadow:0 0 0 2px #ab3c6518}.option.picked .letter{background:var(--wine);color:white}.qfoot{display:flex;align-items:center;justify-content:space-between;margin-top:24px;gap:15px}.qfoot .tip{font-size:15px;color:#81737c}.sectionToast{position:fixed;z-index:30;inset:0;background:#230817aa;display:grid;place-items:center;padding:20px}.toastInner{max-width:470px;background:#fffaf1;border:4px solid #d7b46e;border-radius:25px;padding:38px;text-align:center;box-shadow:0 20px 70px #22000a88}.toastInner .emoji{font-size:75px}.toastInner h2{font-family:'Marhey','Markazi Text',serif;font-size:43px;color:var(--wine);margin:9px}.toastInner p{font-size:19px;line-height:1.5}
+.report{max-width:900px;margin:auto;padding:32px 40px}.reportHead{text-align:center;border-bottom:3px double #ccaf78;padding-bottom:16px}.reportHead .medal{font-size:65px}.reportHead h2{font-size:52px;margin:3px}.reportHead p{font-size:18px;color:#64515b}.meta{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:24px 0}.meta .item{border:1px solid #ecdccc;background:#fff8ee;padding:15px;border-radius:13px}.meta .item b{display:block;color:#8b2446;font-size:14px}.meta .item span{display:block;font-size:20px;margin-top:5px;font-weight:800;overflow-wrap:anywhere}.resultNumber{text-align:center;margin:20px auto;background:linear-gradient(110deg,#6f1031,#9c3957);border-radius:20px;padding:23px;color:white}.resultNumber strong{font-family:'Marhey','Markazi Text',serif;font-size:73px;line-height:1}.resultNumber .below{font-size:20px}.resultNumber .message{margin-top:8px;font-size:21px;color:#ffe5ba}.sectionResults{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:24px 0}.sectionResults div{background:#f7eee7;border:1px solid #e4d4c7;padding:13px 9px;border-radius:12px;text-align:center}.sectionResults b{font-family:'Marhey','Markazi Text',serif;font-size:28px;color:var(--wine)}.sectionResults small{display:block;font-size:13px;line-height:1.35}.answers{border-collapse:collapse;width:100%;margin:12px 0 20px}.answers th,.answers td{padding:9px;border-bottom:1px solid #ebdfd8;text-align:right}.answers th{background:#f5e8e9;color:#7a1b3c}.answers td.good{color:#167450}.answers td.bad{color:#ae2648}.report h3{color:var(--wine);font-size:22px}.status{padding:13px 15px;border-radius:11px;background:#f9f0dd;color:#755522;font-size:16px;line-height:1.5;margin:15px 0}.status.ok{background:#e6f4eb;color:#165e3d}.status.err{background:#f9e9eb;color:#8d2340}.reportButtons{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:24px 0}.footer{text-align:center;font-size:14px;color:#79696f;margin-top:25px}.footer b{color:#7a1b3c}
+@media(max-width:700px){.hero{grid-template-columns:1fr}.heroText{padding:35px 28px}.art{min-height:250px;order:-1}.art .big{font-size:100px}.art .skyline{font-size:30px}.hero h1{font-size:62px}main{padding:18px 12px 44px}.introForm,.report{padding:25px 18px}.fields{grid-template-columns:1fr}.field.grade{grid-column:span 1}.qbanner{min-height:165px;padding:20px}.qbanner h2{font-size:30px}.symbol{font-size:63px}.qbody{padding:23px 18px}.qtext{font-size:33px}.option{font-size:18px;min-height:60px}.meta{grid-template-columns:1fr}.sectionResults{grid-template-columns:repeat(2,1fr)}.qfoot{align-items:stretch;flex-direction:column}.qfoot button{width:100%}.report h2{font-size:42px}.top .tag{display:none}.brand b{font-size:25px}}
+@media print{*{print-color-adjust:exact!important;-webkit-print-color-adjust:exact!important}body{background:white}.top,body:before,.reportButtons,.noPrint,.footer{display:none!important}main{padding:0;max-width:none}.panel,.report{border:0;box-shadow:none;border-radius:0;max-width:none;padding:0}.panel:before{display:none}.reportHead{padding-top:10px}.answers{font-size:13px}.answers td,.answers th{padding:5px}.meta{margin:13px 0}.resultNumber{margin:10px 0;padding:14px}.resultNumber strong{font-size:60px}.sectionResults{margin:12px 0}.status{display:none}.report h3{margin:9px 0} @page{size:A4 portrait;margin:12mm}}
+
+/* شاشة واحدة دون تمرير على الهاتف والتابلت والحاسوب */
+html,body{width:100%;height:100%;height:100dvh;overflow:hidden!important;overscroll-behavior:none}
+body{display:flex;flex-direction:column;font-family:'Markazi Text','Tajawal',serif}
+.top{flex:0 0 auto;height:clamp(45px,8dvh,66px);min-height:0;padding:5px clamp(10px,2vw,32px)}
+.brand .flag{font-size:clamp(19px,3.5dvh,32px)}.brand b{font-size:clamp(16px,2.7dvh,25px);line-height:1.15}.brand small{font-size:clamp(10px,1.8dvh,13px)}.top .tag{font-size:clamp(10px,1.8dvh,13px);padding:5px 10px}
+main{width:100%;flex:1;min-height:0;max-width:none;padding:clamp(6px,1dvh,12px) clamp(7px,1.4vw,22px);display:flex;justify-content:center;align-items:stretch;overflow:hidden}
+main>section:not(.hidden){width:100%;height:100%;min-height:0;margin:auto}
+.panel,.qcard{border-radius:clamp(12px,2vw,24px)}
+.hero{min-height:0;grid-template-columns:1.15fr .85fr}.heroText{padding:clamp(14px,3vw,50px)}.hero h1{font-size:clamp(28px,6.8dvh,76px);line-height:1.12;margin:clamp(5px,1vh,14px) 0}.hero p{font-size:clamp(13px,2.7dvh,22px);line-height:1.35;margin-bottom:clamp(8px,2vh,22px)}.eyebrow{font-size:clamp(11px,2.2dvh,18px)}.mini{font-size:clamp(11px,1.8dvh,14px);margin-top:clamp(6px,1dvh,12px)}.art{min-height:0}.heroPhoto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.53) saturate(.86)}.art .big,.art .skyline,.art strong{position:relative}.art .big{font-size:clamp(48px,12dvh,120px)}.art strong{font-size:clamp(20px,4dvh,36px)}.art .skyline{font-size:clamp(20px,4dvh,40px)}
+.btn{min-height:0;padding:clamp(7px,1.6dvh,12px) clamp(12px,2vw,28px);font-size:clamp(13px,2.4dvh,19px);border-radius:12px;line-height:1.1}
+.introForm{max-width:min(860px,100%);padding:clamp(12px,2.7dvh,28px) clamp(15px,3vw,40px);display:flex;flex-direction:column;justify-content:center;overflow:hidden}.introForm h2{font-size:clamp(27px,5dvh,52px);line-height:1.1}.introForm p{font-size:clamp(11px,2dvh,16px);margin:4px 0}.fields{grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(6px,1.5dvh,12px);margin-top:clamp(7px,1.5dvh,14px)}.field.grade{grid-column:span 1}.field label{font-size:clamp(12px,2.2dvh,16px);margin-bottom:1px}.field input,.field select{padding:clamp(5px,1.2dvh,11px) 12px;font-size:clamp(13px,2.4dvh,18px);height:clamp(36px,6dvh,53px)}.consent{font-size:clamp(11px,1.9dvh,14px);line-height:1.25;padding:clamp(6px,1.2dvh,12px);margin:clamp(7px,1.6dvh,14px) 0}.warning{font-size:clamp(10px,1.8dvh,13px)}
+.game{max-width:min(1100px,100%);display:flex;flex-direction:column;min-height:0}.progressTop{flex:0 0 auto;margin-bottom:clamp(3px,.8dvh,9px)}.progressTop b,.progressTop .num{font-size:clamp(12px,2.1dvh,18px)}.track{flex:0 0 auto;height:clamp(5px,1.2dvh,10px);margin-bottom:clamp(5px,1.2dvh,14px)}.qcard{flex:1;min-height:0;display:grid;grid-template-rows:minmax(0,31%) minmax(0,69%)}.qbanner{min-height:0;padding:clamp(9px,2vh,25px) clamp(13px,2.7vw,35px)}.qbanner h2{font-size:clamp(23px,4.5dvh,43px);line-height:1.2}.sectionName{font-size:clamp(11px,1.9dvh,16px)}.photoFrame{height:100%;width:min(30%,290px);min-width:95px;position:relative;display:flex;justify-content:center;align-items:center}.photoFrame img{width:100%;height:100%;border-radius:12px;object-fit:cover;border:3px solid #f1c886;box-shadow:0 5px 18px #25021355}.photoEmblem{position:absolute;bottom:5px;left:5px;font-size:clamp(18px,4dvh,37px);background:#fff9;border-radius:9px;padding:0 5px}
+.qbody{min-height:0;display:flex;flex-direction:column;padding:clamp(8px,2dvh,23px) clamp(12px,2.5vw,28px)}.qtext{font-size:clamp(18px,3.7dvh,37px);line-height:1.25;margin:0 0 clamp(5px,1.5dvh,12px);flex:0 0 auto}.options{flex:1;min-height:0;display:grid;grid-template-rows:repeat(3,minmax(0,1fr));gap:clamp(4px,1dvh,10px)}.option{min-height:0;padding:clamp(3px,1.1dvh,11px) 12px;font-size:clamp(13px,2.8dvh,23px);line-height:1.18;border-radius:12px}.option .letter{height:clamp(25px,4.6dvh,42px);flex-basis:clamp(25px,4.6dvh,42px);font-size:clamp(13px,2.5dvh,20px)}.qfoot{flex:0 0 auto;margin-top:clamp(5px,1.5dvh,13px)}.qfoot .tip{font-size:clamp(10px,1.8dvh,15px)}
+.report{max-width:min(1000px,100%);display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:clamp(8px,1.8dvh,20px) clamp(12px,2vw,30px)}.reportHead{padding-bottom:clamp(4px,1dvh,12px)}.reportHead .medal{font-size:clamp(23px,5.5dvh,48px)}.reportHead h2{font-size:clamp(24px,4.5dvh,45px);line-height:1.15}.reportHead p{font-size:clamp(11px,2dvh,17px);margin:2px}.report .noPrint[style]{margin:clamp(3px,.7dvh,8px) auto!important}.meta{margin:clamp(5px,1dvh,10px) 0;gap:7px}.meta .item{padding:clamp(6px,1.3dvh,12px)}.meta .item b{font-size:clamp(10px,1.6dvh,13px)}.meta .item span{font-size:clamp(12px,2.1dvh,18px);margin-top:0}.resultNumber{margin:clamp(5px,1dvh,10px) auto;padding:clamp(7px,1.4dvh,14px);width:100%}.resultNumber strong{font-size:clamp(33px,6.5dvh,65px)}.resultNumber .below{font-size:clamp(12px,2.1dvh,19px)}.resultNumber .message{font-size:clamp(12px,2.2dvh,20px);margin-top:0}.report h3{font-size:clamp(12px,2.3dvh,20px);margin:clamp(5px,1dvh,10px) 0 2px}.sectionResults{margin:clamp(3px,.5dvh,7px) 0;gap:5px}.sectionResults div{padding:clamp(4px,.8dvh,9px) 3px}.sectionResults small{font-size:clamp(8px,1.5dvh,13px)}.sectionResults b{font-size:clamp(14px,2.7dvh,25px)}.detailArchive{display:none}.status{padding:clamp(5px,1dvh,10px);font-size:clamp(9px,1.6dvh,13px);line-height:1.2;margin:clamp(3px,.7dvh,6px) 0}.reportButtons{margin:clamp(3px,.7dvh,8px) 0;gap:5px}.reportButtons .btn{font-size:clamp(10px,1.9dvh,16px);padding:clamp(5px,1dvh,9px) clamp(7px,1.2vw,16px)}.footer{font-size:clamp(9px,1.6dvh,13px);margin-top:clamp(4px,.8dvh,8px)}
+.toastInner{max-height:calc(100dvh - 25px);padding:clamp(10px,3dvh,35px);display:flex;flex-direction:column;align-items:center}.modalPhoto{width:min(220px,65vw);height:clamp(90px,24dvh,190px);background-position:center;background-size:cover;border-radius:16px;border:4px solid #e4c483}.toastInner h2{font-size:clamp(26px,5dvh,40px);margin:5px}.toastInner p{font-size:clamp(12px,2.4dvh,18px)}
+@media(max-width:700px){.top .tag{display:none}.hero{grid-template-columns:1fr;grid-template-rows:38% 62%}.art{order:-1;min-height:0;padding:8px}.heroText{padding:clamp(9px,2.5dvh,20px);text-align:center;align-items:center}.hero h1{font-size:clamp(25px,5dvh,45px)}.hero p{font-size:clamp(12px,2.1dvh,17px)}.art .big{font-size:clamp(35px,7dvh,70px)}.art strong{font-size:clamp(15px,3dvh,24px)}.art .skyline{font-size:clamp(13px,2.6dvh,25px)}.introForm{padding:clamp(8px,1.5dvh,14px) 12px}.fields{grid-template-columns:1fr 1fr;gap:clamp(4px,.6dvh,7px) 7px}.field label{font-size:clamp(10px,1.8dvh,13px)}.field input,.field select{height:clamp(34px,5dvh,44px);font-size:clamp(11px,1.9dvh,15px)}.introForm h2{font-size:clamp(24px,4.6dvh,37px)}.qbanner{padding:clamp(8px,1.5dvh,14px)}.qbanner h2{font-size:clamp(17px,3.2dvh,28px)}.photoFrame{min-width:88px;width:34%}.qtext{font-size:clamp(16px,3dvh,25px)}.qbody{padding:clamp(6px,1.2dvh,11px)}.option{font-size:clamp(12px,2.25dvh,17px);padding:3px 7px;gap:7px}.qfoot{flex-direction:row;align-items:center}.qfoot .tip{display:none}.qfoot button{width:100%}.meta{grid-template-columns:repeat(3,minmax(0,1fr))}.sectionResults{grid-template-columns:repeat(5,minmax(0,1fr))}.report{padding:5px 9px}.report h2{font-size:clamp(21px,3.8dvh,32px)}.reportHead p{font-size:clamp(10px,1.7dvh,13px)}.reportButtons{flex-wrap:nowrap}.reportButtons .btn{font-size:clamp(9px,1.5dvh,12px)}.report .meta .item span{font-size:clamp(10px,1.8dvh,13px)}}
+@media(max-width:390px){.brand b{font-size:14px}.brand small{font-size:9px}.sectionResults small{font-size:7px}.qtext{font-size:clamp(15px,2.7dvh,21px)}.option{font-size:clamp(11px,2dvh,15px)}.introForm p.warning{display:none}}
+@media(max-height:580px) and (min-width:701px){.hero{grid-template-columns:1fr 1fr}.qcard{grid-template-rows:25% 75%}.qtext{font-size:clamp(16px,4dvh,28px)}.option{font-size:clamp(12px,3.5dvh,18px)}.reportHead .medal{display:none}.report .reportHead p{display:none}.report .footer{display:none}}
+@media print{html,body{height:auto!important;overflow:visible!important}body{display:block}main{display:block;overflow:visible;padding:0}main>section:not(.hidden){height:auto}.report{display:block;overflow:visible}.detailArchive{display:block}.top,.reportButtons,.noPrint{display:none!important}.footer{display:block}.answers{font-size:12px}.resultNumber{width:100%}}
+/* تصحيح فوري واضح، خط مرح للعناوين ومركزي للقراءة */
+.qtext{font-family:'Markazi Text',serif;font-weight:700;line-height:1.15}
+.option{font-family:'Markazi Text',serif;font-weight:700;font-size:clamp(18px,3.5dvh,30px)}
+.option.correct,.option.correct:disabled{background:#e2f7e8;border-color:#148249;color:#075d32;opacity:1}
+.option.incorrect,.option.incorrect:disabled{background:#ffe8e9;border-color:#c72d4c;color:#8c1430;opacity:1}
+.option:disabled{cursor:default;opacity:.72}
+.option.correct .letter{background:#16804b;color:white}
+.option.incorrect .letter{background:#bb2644;color:white}
+.feedbackCorrect{color:#096b3c!important;font-weight:800!important}
+.feedbackWrong{color:#ad2140!important;font-weight:800!important}
+.qfoot .tip{font-family:'Markazi Text',serif;font-size:clamp(16px,2.7dvh,25px);line-height:1.05;max-width:67%}
+@media(max-width:700px){.option{font-size:clamp(15px,2.65dvh,23px)}.qfoot .tip{display:block;max-width:54%;font-size:clamp(12px,2dvh,18px)}.qfoot button{width:auto;flex:1;padding-inline:8px;font-size:clamp(12px,2.1dvh,17px)}}
+</style>
+</head>
+<body>
+<header class="top"><div class="brand"><span class="flag">🇶🇦</span><div><b>مدرسة العب الثانوية للبنات | رحلة في قلب قطر</b><br><small>فكرة: نادية الغانم • مسابقة الهوية الوطنية والتراث القطري</small></div></div><div class="tag">20 سؤالًا • خمس محطات • ذكريات وطنية</div></header>
+<main>
+<section id="welcome" class="panel hero"><div class="heroText"><div class="eyebrow">✦ لأنكِ شريكة في رحلة ابنتكِ ✦</div><h1>لكِ يا أمّي...<br>مفاجأة قطرية!</h1><p>هذه المرة، الأم هي نجمة التحدّي! رحلة ممتعة بين تاريخ قطر، وتراثها، وشخصياتها الملهمة. عشرون سؤالًا، وفي الختام مفاجأة باسمكِ واسم ابنتكِ.</p><div class="btnRow"><button class="btn" id="startBtn">اكتشفي المفاجأة ✨</button></div><div class="mini">مدرسة العب الثانوية للبنات • فكرة: نادية الغانم</div></div><div class="art"><img class="heroPhoto" src="https://www.voyageway.com/wp-content/uploads/2018/01/fort-al-zubarah-qatar.jpg" alt="صورة حقيقية لقلعة الزبارة القطرية"><span class="spark s1">✦</span><span class="spark s2">✧</span><span class="spark s3">✦</span><div class="big">🇶🇦</div><div class="skyline">🏛️ ◈ 🏙️</div><strong>من تراثنا... إلى مستقبلنا</strong></div></section>
+<section id="registration" class="panel introForm hidden"><div class="eyebrow">الخطوة الأولى من المفاجأة</div><h2>من ضيفتنا المميزة؟ 🌷</h2><p>سجّلي بياناتكِ حتى تظهر في شهادة المشاركة والتقرير النهائي. تُستخدم البيانات لإرسال نتيجة المشاركة إلى المعلمة عبر خدمة إرسال بريد إلكتروني خارجية بعد موافقة ولية الأمر.</p><form id="familyForm"><div class="fields"><div class="field"><label for="parentName">اسم الأم / ولية الأمر *</label><input id="parentName" maxlength="80" required placeholder="اكتبي اسمكِ الكريم" autocomplete="name"></div><div class="field"><label for="daughterName">اسم ابنتكِ *</label><input id="daughterName" maxlength="80" required placeholder="اسم الطالبة"></div><div class="field grade"><label for="grade">الصف الدراسي لابنتكِ *</label><select id="grade" required><option value="">اختاري الصف الدراسي</option><option value="العاشر">العاشر</option><option value="الحادي عشر">الحادي عشر</option><option value="الثاني عشر">الثاني عشر</option></select></div><div class="field"><label for="classSection">شعبة / صف الابنة *</label><input id="classSection" maxlength="32" required placeholder="مثال: عاشر 4 أو 11 علمي 1"></div></div><label class="consent"><input type="checkbox" id="consent" required><span>أوافق على استخدام اسمي واسم ابنتي وصفها ونتيجة الإجابات لإعداد تقرير المشاركة وإرساله إلى المعلمة عبر خدمة FormSubmit الخارجية لأغراض النشاط المدرسي فقط.</span></label><button type="submit" class="btn">ابدئي رحلة قطر 🇶🇦</button><p class="warning">* الحقول المطلوبة لا تتضمن رقم الهاتف أو أي بيانات اتصال شخصية.</p></form></section>
+<section id="quiz" class="game hidden"><div class="progressTop"><b id="sectionDisplay">المحطة الأولى</b><div class="num" id="counter">السؤال 1 من 20</div></div><div class="track"><div class="fill" id="fill"></div></div><div class="qcard" id="qCard"><div id="banner" class="qbanner t1"><div><span class="sectionName" id="sectionName"></span><h2 id="bannerTitle"></h2></div><div class="photoFrame"><img id="qPhoto" src="" alt="صورة حقيقية من قطر" loading="eager" referrerpolicy="no-referrer"><span class="photoEmblem" id="symbol">🇶🇦</span></div></div><div class="qbody"><div class="qtext" id="question"></div><div class="options" id="options"></div><div class="qfoot"><span class="tip" id="instantFeedback" role="status" aria-live="polite">اختاري إجابة واحدة ✦</span><button class="btn" id="nextBtn" disabled>تأكيد ومتابعة ←</button></div></div></div></section>
+<section id="result" class="panel report hidden"><audio id="closingAudio" src="" preload="none" loop></audio><div class="reportHead"><div class="medal">🏅</div><div class="eyebrow">شهادة فخر ومشاركة</div><h2>من قلب قطر... شكرًا لكِ!</h2><p>تقديرًا لمشاركتكِ الجميلة في تحدّي الهوية الوطنية والتراث القطري</p></div><div class="noPrint" style="text-align:center;margin:14px auto"><button class="btn secondary" type="button" id="musicToggle" aria-pressed="false">♫ تشغيل موسيقى الختام</button></div><div class="meta"><div class="item"><b>ولية الأمر</b><span id="rParent"></span></div><div class="item"><b>ابنتها الغالية</b><span id="rDaughter"></span></div><div class="item"><b>الصف والشعبة</b><span id="rGrade"></span></div></div><div class="resultNumber"><div>نتيجتكِ في الرحلة الوطنية</div><strong id="rScore">0 / 20</strong><div class="below" id="rPercent"></div><div class="message" id="rMessage"></div></div><h3>محطات رحلتكِ الخمس</h3><div class="sectionResults" id="sectionResults"></div><div class="detailArchive"><h3>تفاصيل الإجابات</h3><table class="answers"><thead><tr><th>رقم</th><th>إجابتكِ</th><th>الإجابة الصحيحة</th><th>النتيجة</th></tr></thead><tbody id="answerRows"></tbody></table></div><div class="status noPrint" id="sendStatus" aria-live="polite"></div><div class="reportButtons noPrint"><button class="btn" onclick="window.print()">🖨️ طباعة الشهادة والتقرير</button><button class="btn secondary" id="downloadBtn">⬇️ حفظ التقرير</button><button class="btn secondary" onclick="location.reload()">↻ مشاركة جديدة</button></div><div class="footer">بكل فخر واعتزاز بهويتنا الوطنية 🇶🇦 <b>مدرسة العب الثانوية للبنات • فكرة: نادية الغانم</b><br><span id="rDate"></span></div></section>
+</main>
+<div id="sectionModal" class="sectionToast hidden" role="dialog" aria-modal="true"><div class="toastInner"><div class="modalPhoto" id="modalPhoto"></div><h2 id="modalHeading"></h2><p id="modalText"></p><button class="btn gold" id="modalNext">إلى المحطة التالية ✨</button></div></div>
+<script>
+/* إعداد المعلمة: الصقي هنا رابط نشر Google Apps Script بعد إعداد ملف الاستقبال.
+   إن تُرك فارغًا، تظل اللعبة والشهادة تعملان، لكن الإرسال التلقائي لن يكون مفعّلًا. */
+const REPORT_ENDPOINT = ''; // يلزم ربط خدمة استقبال التقرير قبل المشاركة الفعلية
+const sections=[
+{name:'الهوية الوطنية والتراث القطري',short:'تاريخنا وتراثنا',title:'جذور تحكي حكايتنا',icon:'🏛️',desc:'تراثنا هو الحكاية التي تحملها الأجيال.'},
+{name:'الأمير الوالد الشيخ حمد بن خليفة آل ثاني',short:'الأمير الوالد',title:'مسيرة بناء ونهضة',icon:'🌇',desc:'محطة تروي صفحات من نهضة قطر الحديثة.'},
+{name:'الشيخة موزا بنت ناصر – إلهام وعطاء',short:'التعليم والعطاء',title:'رؤية تصنع المستقبل',icon:'📚',desc:'حين يكون التعليم بوابة إلى الفرص والأمل.'},
+{name:'الشيخ تميم بن حمد آل ثاني',short:'قيادة وإنجاز',title:'قيادة وإنجازات',icon:'🏆',desc:'في هذه المحطة نتذكر محطات من تاريخ وطننا.'},
+{name:'نساء قطريات ملهمات',short:'قطريات ملهمات',title:'بصمات من نور',icon:'🌸',desc:'نحتفي بعطاء المرأة القطرية في الثقافة والتعليم.'}];
+const sectionPhotos=[
+'https://www.voyageway.com/wp-content/uploads/2018/01/fort-al-zubarah-qatar.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Flag_of_Qatar.svg/960px-Flag_of_Qatar.svg.png',
+'https://www.qatar-tribune.com/watanqatartribune/uploads/images/2023/06/05/102783.jpg',
+'https://cdn.qna.org.qa/media/2rxb1ww1/qna_hh-the-amir-n.jpg?height=900&v=1db4b5bf11fecb0&width=1200',
+'https://i0.wp.com/magzoid.com/wp-content/uploads/2023/04/news1.webp?fit=2029%2C1268&ssl=1'
+];
+// صور منتقاة يدويًا لتطابق معنى كل سؤال، بدل البحث التلقائي العشوائي.
+// عند تعذّر تحميل صورة لا نعرض صورة بديلة خاطئة.
+const questionPhotos=[
+ {url:'https://images.jpost.com/image/upload/f_auto%2Cfl_lossy/t_JD_ArticleMainImageFaceDetect/521772',caption:'الشيخ جاسم بن محمد بن ثاني – مؤسس قطر'},
+ {url:'https://www.diwan.gov.qa/-/media/diwan-amiri/images/news-images/hh/activities-and-occasions/2025/december/18/1.ashx',caption:'احتفالات اليوم الوطني القطري في 18 ديسمبر'},
+ {url:'https://cdn.easteast.world/uploads/post_image/5214/image/medium_e6280072597a2f64412a.jpg',caption:'صورة تاريخية للغوص على اللؤلؤ'},
+ {url:'https://cdn-content.qatarliving.com/articles/featured/article-46514491_1764331393.jpg',caption:'قلعة الزبارة التاريخية'},
+ {url:'https://fournews-assets-prod-s3-ew1-nmprod.s3.amazonaws.com/media/2013/06/25_Qatar_g_w.jpg',caption:'الشيخ حمد بن خليفة آل ثاني في مناسبة انتقال الحكم'},
+ {url:'https://visitqatar.com/content/dam/visitqatar/img/images-for-attractions/QF-1.jpg/_jcr_content/renditions/medium-1280px.jpeg',caption:'مبنى مؤسسة قطر في المدينة التعليمية'},
+ {url:'https://go-globe.hk/wp-content/uploads/2023/10/cover_Qatar-National-Vision-2033-1024x853.webp',caption:'رؤية قطر الوطنية 2030'},
+ {url:'https://fournews-assets-prod-s3-ew1-nmprod.s3.amazonaws.com/media/2013/06/25_Qatar_g_w.jpg',caption:'انتقال الحكم من الشيخ حمد إلى الشيخ تميم عام 2013'},
+ {url:'https://www.mozabintnasser.qa/sites/default/files/2025-02/EAA_0111417008_1.jpg',caption:'الشيخة موزا ومبادرات دعم التعليم'},
+ {url:'https://web-summit-avenger.imgix.net/production/avatars/original/c2267e3556107ebaa993b9d38ddc0fef956af765.?auto=format&crop=faces&fit=crop&h=600&ixlib=rb-3.4.0&w=600',caption:'الشيخة موزا بنت ناصر'},
+ {url:'https://www.mozabintnasser.qa/sites/default/files/2025-02/EAA_0111417008_1.jpg',caption:'مبادرة التعليم فوق الجميع'},
+ {url:'https://static.udst.edu.qa/s3fs-public/styles/social_large/public/2022-08/dsc_1328.jpg',caption:'مؤسسة صلتك – تعاون لدعم فرص الشباب'},
+ {url:'https://web-summit-avenger.imgix.net/production/avatars/original/c2267e3556107ebaa993b9d38ddc0fef956af765.?auto=format&crop=faces&fit=crop&h=600&ixlib=rb-3.4.0&w=600',caption:'الشيخة موزا بنت ناصر – خريجة علم الاجتماع'},
+ {url:'https://diwan.gov.qa/-/media/diwan-amiri/images/official-photos/hh-the-amir-3-2.ashx?iar=1',caption:'حضرة صاحب السمو الشيخ تميم بن حمد آل ثاني'},
+ {url:'https://www.legendsliveon.co.uk/sites/default/files/styles/article_main_image/public/2025-11/IMG_4197.jpeg?itok=J1GVhcBN',caption:'الأكاديمية العسكرية الملكية ساندهيرست'},
+ {url:'https://alarab.qa/get/maximage/20250101_1735740291-368.jpg?t=1735740291',caption:'مقر اللجنة الأولمبية القطرية'},
+ {url:'https://d3lbfr570u7hdr.cloudfront.net/stadiumastro/media/perform-article/2022/nov/18/world-cup-lusail-stadium_nqwxyebjk5k71mkgyqgpv9hmz.jpg',caption:'استاد لوسيل خلال كأس العالم قطر 2022'},
+ {url:'https://i0.wp.com/magzoid.com/wp-content/uploads/2023/04/news1.webp?fit=2029%2C1268&ssl=1',caption:'الشيخة المياسة بنت حمد آل ثاني'},
+ {url:'https://images.ctfassets.net/2h1qowfuxkq7/Yl61InpjhH7Na322f5Cqc/65e0683a40e0a35595927019591d01fe/Her_Excellency_Sheikha_Hind_bint_Hamad_Al_Thani_-__profile.jpg?fit=fill&h=675&q=85&w=960',caption:'الشيخة هند بنت حمد آل ثاني'},
+ {url:'https://cdn.sanity.io/images/e1i1ex1t/production/9e25083765e32f612c3096e2c28b1ad9a761144b-800x600.jpg?auto=format&fit=crop&h=900&w=1200',caption:'متحف قطر الوطني – من متاحف قطر'}
+];
+function loadQuestionPhoto(i){
+ const img=$('qPhoto'),frame=img.parentElement,photo=questionPhotos[i];
+ img.style.display='none';img.onload=null;img.onerror=null;
+ frame.classList.remove('hasPhoto');
+ if(!photo)return;
+ img.alt=photo.caption;
+ img.onload=()=>{if(current===i){img.style.display='block';frame.classList.add('hasPhoto')}};
+ img.onerror=()=>{if(current===i){img.style.display='none';frame.classList.remove('hasPhoto')}};
+ img.src=photo.url;
+}
+
+const qs=[
+['من هو مؤسس دولة قطر؟',['الشيخ جاسم بن محمد بن ثاني','الشيخ حمد بن خليفة آل ثاني','الشيخ خليفة بن حمد آل ثاني'],0,0,'⚔️'],
+['ما الحدث التاريخي الذي يحييه القطريون في 18 ديسمبر من كل عام؟',['اكتشاف النفط','توحيد قطر على يد المؤسس','افتتاح أول جامعة'],1,0,'🇶🇦'],
+['ما المهنة التي شكّلت مصدرًا رئيسيًا لرزق أهل قطر قبل اكتشاف النفط؟',['صناعة الطائرات','صناعة السيارات','الغوص على اللؤلؤ'],2,0,'🦪'],
+['أي موقع قطري أُدرج على قائمة التراث العالمي لليونسكو عام 2013؟',['موقع الزبارة الأثري','سوق واقف','أبراج لوسيل'],0,0,'🏰'],
+['في أي عام تولّى الشيخ حمد بن خليفة آل ثاني مقاليد الحكم؟',['1985','1995','2005'],1,1,'📅'],
+['ما المؤسسة التي أسسها الشيخ حمد بن خليفة آل ثاني والشيخة موزا بنت ناصر معًا؟',['مؤسسة قطر للتربية والعلوم وتنمية المجتمع','منظمة الصحة العالمية','جامعة الدول العربية'],0,1,'🏫'],
+['في عهد أي أمير أُطلقت رؤية قطر الوطنية 2030 عام 2008؟',['الشيخ جاسم بن محمد بن ثاني','الشيخ خليفة بن حمد آل ثاني','الشيخ حمد بن خليفة آل ثاني'],2,1,'🌱'],
+['ما العام الذي انتهت فيه فترة حكم الشيخ حمد بن خليفة آل ثاني وانتقلت فيه مقاليد الحكم إلى الشيخ تميم؟',['2010','2013','2016'],1,1,'📜'],
+['ما المجال الذي ارتبطت به أبرز مبادرات الشيخة موزا بنت ناصر؟',['التعليم وتمكين الإنسان','صناعة السيارات','الطيران العسكري'],0,2,'🎓'],
+['من هي الشخصية القطرية التي تقود مؤسسة قطر وتدعم التعليم والبحث العلمي؟',['الشيخة المياسة بنت حمد','الشيخة موزا بنت ناصر','الشيخة هند بنت حمد'],1,2,'🔬'],
+['ما اسم المبادرة العالمية التي أسستها الشيخة موزا بهدف تعزيز فرص التعليم؟',['أيادي الخير نحو آسيا','قطر للسياحة','التعليم فوق الجميع'],2,2,'🌍'],
+['ما الهدف الأساسي من مبادرة «صلتك» التي أسستها الشيخة موزا؟',['توفير الفرص الاقتصادية والتوظيف للشباب','إنشاء الملاعب الرياضية','تطوير الموانئ البحرية'],0,2,'🤝'],
+['في أي تخصص حصلت الشيخة موزا بنت ناصر على شهادتها الجامعية الأولى؟',['الهندسة المعمارية','علم الاجتماع','الطب'],1,2,'🎓'],
+['في أي عام تولّى الشيخ تميم بن حمد آل ثاني مقاليد الحكم في قطر؟',['2013','2018','2022'],0,3,'🇶🇦'],
+['في أي أكاديمية عسكرية تخرج الشيخ تميم بن حمد آل ثاني؟',['الأكاديمية البحرية الأمريكية','أكاديمية ساند هيرست العسكرية الملكية','الأكاديمية العسكرية الفرنسية'],1,3,'🎖️'],
+['أي جهة رياضية قطرية تولّى الشيخ تميم رئاستها عام 2000؟',['الاتحاد الدولي لكرة القدم','الاتحاد الآسيوي لكرة القدم','اللجنة الأولمبية القطرية'],2,3,'🥇'],
+['ما البطولة العالمية التي استضافتها قطر عام 2022 في عهد الشيخ تميم بن حمد آل ثاني؟',['كأس العالم لكرة القدم','الألعاب الأولمبية الصيفية','كأس العالم للكريكيت'],0,3,'⚽'],
+['من هي الشخصية القطرية التي ترأس مجلس أمناء متاحف قطر وتدعم الفن والثقافة؟',['الشيخة موزا بنت ناصر','الشيخة المياسة بنت حمد آل ثاني','الشيخة هند بنت حمد آل ثاني'],1,4,'🖼️'],
+['من هي الشخصية القطرية التي تشغل منصب نائب رئيس مجلس إدارة مؤسسة قطر؟',['الشيخة هند بنت حمد آل ثاني','الشيخة المياسة بنت حمد آل ثاني','الشيخة موزا بنت ناصر'],0,4,'🌺'],
+['أي مؤسسة ثقافية ترأس الشيخة المياسة بنت حمد مجلس أمنائها؟',['منظمة اليونسكو','المتحف البريطاني','متاحف قطر'],2,4,'🏺']
+];
+const $=id=>document.getElementById(id);let participant={},current=0,selected=null,answers=[],answered=false;const letters=['أ','ب','ج'];
+function show(id){['welcome','registration','quiz','result'].forEach(x=>$(x).classList.toggle('hidden',x!==id));void 0}
+$('startBtn').onclick=()=>{if(document.documentElement.requestFullscreen)document.documentElement.requestFullscreen().catch(()=>{});show('registration')};
+$('familyForm').addEventListener('submit',e=>{e.preventDefault();if(!e.target.reportValidity())return;participant={parent:$('parentName').value.trim(),daughter:$('daughterName').value.trim(),grade:$('grade').value, classSection:$('classSection').value.trim()};if(!participant.parent||!participant.daughter||!participant.classSection)return;show('quiz');renderQuestion()});
+function renderQuestion(){
+ selected=null;answered=false;
+ const [q,opts,correct,sect,sym]=qs[current],sec=sections[sect];
+ $('counter').textContent=`السؤال ${current+1} من ${qs.length}`;
+ $('sectionDisplay').textContent=`المحطة ${sect+1} من 5: ${sec.short}`;
+ $('fill').style.width=`${current/qs.length*100}%`;
+ $('banner').className=`qbanner t${sect+1}`;
+ $('sectionName').textContent=sec.name;
+ $('bannerTitle').textContent=sec.title;
+ $('symbol').textContent=sym;
+ $('qPhoto').removeAttribute('src');$('qPhoto').style.display='none';
+ loadQuestionPhoto(current);
+ $('question').textContent=q;
+ $('instantFeedback').textContent='اختاري إجابة واحدة ✦';
+ $('instantFeedback').className='tip';
+ $('options').replaceChildren();
+ opts.forEach((opt,i)=>{
+  const b=document.createElement('button');b.type='button';b.className='option';
+  const mark=document.createElement('span');mark.className='letter';mark.textContent=letters[i];
+  const value=document.createElement('span');value.textContent=opt;
+  b.append(mark,value);
+  b.onclick=()=>{
+   if(answered)return;
+   answered=true;selected=i;
+   document.querySelectorAll('.option').forEach((other,j)=>{
+    other.disabled=true;
+    if(j===correct)other.classList.add('correct');
+    if(j===i&&i!==correct)other.classList.add('incorrect');
+   });
+   $('instantFeedback').textContent=i===correct?'✓ إجابة صحيحة! أحسنتِ يا نجمة قطر':'✗ إجابة غير صحيحة؛ الصحيح: '+opts[correct];
+   $('instantFeedback').className='tip '+(i===correct?'feedbackCorrect':'feedbackWrong');
+   $('nextBtn').disabled=false;
+   $('nextBtn').textContent=current===qs.length-1?'شاهدي نتيجتكِ ✨':'السؤال التالي ←';
+  };
+  $('options').appendChild(b)
+ });
+ $('nextBtn').disabled=true;
+ $('nextBtn').textContent='اختاري إجابتكِ أولًا';
+ $('qCard').style.animation='none';void $('qCard').offsetWidth;$('qCard').style.animation='rise .38s ease both';
+}
+$('nextBtn').onclick=()=>{
+ if(!answered||selected===null)return;
+ const old=qs[current][3];answers.push(selected);current++;
+ if(current===qs.length){finish();return}
+ if(qs[current][3]!==old){
+  const sec=sections[qs[current][3]];
+  $('modalPhoto').style.backgroundImage=`url("${sectionPhotos[qs[current][3]]}")`;
+  $('modalHeading').textContent=sec.title;
+  $('modalText').textContent=sec.desc;
+  $('sectionModal').classList.remove('hidden')
+ }
+ renderQuestion()
+};
+$('modalNext').onclick=()=>{$('sectionModal').classList.add('hidden');void 0};
+let finalReport=null;
+const closingAudio=$('closingAudio'),musicToggle=$('musicToggle');
+closingAudio.volume=0.45;
+function updateMusicButton(){const playing=!closingAudio.paused;musicToggle.textContent=playing?'♫ إيقاف موسيقى الختام':'♫ تشغيل موسيقى الختام';musicToggle.setAttribute('aria-pressed',String(playing))}
+musicToggle.onclick=()=>{if(closingAudio.paused){closingAudio.play().catch(()=>updateMusicButton())}else closingAudio.pause();updateMusicButton()};
+closingAudio.addEventListener('play',updateMusicButton);
+closingAudio.addEventListener('pause',updateMusicButton);
+
+function finish(){let score=answers.reduce((n,a,i)=>n+(a===qs[i][2]?1:0),0),pct=Math.round(score/qs.length*100);let perSection=sections.map((s,i)=>{let ids=qs.map((q,k)=>q[3]===i?k:-1).filter(v=>v>=0);return{section:s.short,correct:ids.filter(k=>answers[k]===qs[k][2]).length,total:ids.length}});let date=new Intl.DateTimeFormat('ar-QA',{timeZone:'Asia/Qatar',dateStyle:'full',timeStyle:'short'}).format(new Date());finalReport={...participant,date,score,total:qs.length,percent:pct,sections:perSection,answers:qs.map((q,i)=>({number:i+1,section:sections[q[3]].short,question:q[0],chosen:answers[i],chosenText:q[1][answers[i]],correct:q[2],correctText:q[1][q[2]],isCorrect:answers[i]===q[2]}))};$('rParent').textContent=participant.parent;$('rDaughter').textContent=participant.daughter;$('rGrade').textContent=participant.grade+' - '+participant.classSection;$('rScore').textContent=`${score} / ${qs.length}`;$('rPercent').textContent=`${pct}% من الإجابات الصحيحة`;$('rMessage').textContent=pct>=90?'أنتِ نجمة الرحلة الوطنية! 🌟':pct>=70?'مشاركة رائعة ومعرفة نفخر بها! ✨':pct>=50?'شكرًا لروحكِ الجميلة وحبكِ للتعلّم! 💗':'أجمل ما في الرحلة هو مشاركتكِ معنا! 🇶🇦';$('rDate').textContent=date;
+$('sectionResults').replaceChildren();perSection.forEach(s=>{let d=document.createElement('div'),small=document.createElement('small'),b=document.createElement('b');small.textContent=s.section;b.textContent=`${s.correct} / ${s.total}`;d.append(small,b);$('sectionResults').appendChild(d)});$('answerRows').replaceChildren();finalReport.answers.forEach(a=>{let tr=document.createElement('tr');let td1=document.createElement('td'),td2=document.createElement('td'),td3=document.createElement('td'),td4=document.createElement('td');td1.textContent=a.number;td2.textContent=`${letters[a.chosen]}: ${a.chosenText}`;td3.textContent=`${letters[a.correct]}: ${a.correctText}`;td4.textContent=a.isCorrect?'صحيحة ✓':'غير صحيحة';td4.className=a.isCorrect?'good':'bad';tr.append(td1,td2,td3,td4);$('answerRows').appendChild(tr)});show('result');closingAudio.currentTime=0;closingAudio.play().catch(()=>updateMusicButton());sendReport(finalReport)}
+async function sendReport(report){
+ const status=$('sendStatus');
+ status.className='status noPrint';
+ status.textContent='يجري إرسال التقرير الكامل إلى بريد المدرسة المخصص للمسابقة...';
+ const details=report.answers.map(a=>`${a.number}. ${a.question}\nإجابة الأم: ${a.chosenText}\nالصحيحة: ${a.correctText}\nالتقييم: ${a.isCorrect?'صحيحة':'غير صحيحة'}`).join('\n\n');
+ const payload={
+  _subject:`مسابقة الهوية القطرية | ${report.daughter} | ${report.grade} ${report.classSection} | ${report.score} من 20`,
+  _template:'table',
+  'وقت المشاركة (قطر)':report.date,
+  'اسم ولية الأمر':report.parent,
+  'اسم الابنة':report.daughter,
+  'الصف':report.grade,
+  'الشعبة':report.classSection,
+  'الدرجة':`${report.score} / ${report.total}`,
+  'النسبة':`${report.percent}%`,
+  'تفاصيل الإجابات العشرين بالترتيب':details
+ };
+ try{
+  const response=await fetch('https://formsubmit.co/ajax/phys.taibi@gmail.com',{
+   method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+   body:JSON.stringify(payload)
+  });
+  const data=await response.json();
+  if(!response.ok || String(data.success).toLowerCase()!=='true'){
+   throw new Error(data.message||'تعذر تأكيد الإرسال');
+  }
+  status.className='status ok noPrint';
+  status.textContent='تم قبول التقرير من خدمة الإرسال. إذا لم يتم تفعيل البريد بعد، يلزم أن توافق المعلمة على رسالة التفعيل التي ستصلها؛ وبعد التفعيل تُسلَّم التقارير إلى بريدها.';
+ }catch(err){
+  status.className='status err noPrint';
+  status.textContent='لم يتم تأكيد إرسال التقرير. يُرجى حفظ نسخة بواسطة زر «حفظ التقرير»، وإبلاغ إدارة النشاط.';
+ }
+}
+$('downloadBtn').onclick=()=>{if(!finalReport)return;const safe=s=>String(s).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));const r=finalReport;const h=`<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>تقرير رحلة قطر</title><style>body{font-family:Tahoma,Arial;padding:25px;max-width:850px;margin:auto}h1{color:#791536}table{width:100%;border-collapse:collapse}td,th{border:1px solid #ddd;padding:8px;text-align:right}th{background:#f5e4ea}.score{padding:20px;background:#791536;color:#fff;border-radius:14px;font-size:26px;text-align:center}@media print{body{padding:0}}/* تصحيح فوري واضح، خط مرح للعناوين ومركزي للقراءة */
+.qtext{font-family:'Markazi Text',serif;font-weight:700;line-height:1.15}
+.option{font-family:'Markazi Text',serif;font-weight:700;font-size:clamp(18px,3.5dvh,30px)}
+.option.correct,.option.correct:disabled{background:#e2f7e8;border-color:#148249;color:#075d32;opacity:1}
+.option.incorrect,.option.incorrect:disabled{background:#ffe8e9;border-color:#c72d4c;color:#8c1430;opacity:1}
+.option:disabled{cursor:default;opacity:.72}
+.option.correct .letter{background:#16804b;color:white}
+.option.incorrect .letter{background:#bb2644;color:white}
+.feedbackCorrect{color:#096b3c!important;font-weight:800!important}
+.feedbackWrong{color:#ad2140!important;font-weight:800!important}
+.qfoot .tip{font-family:'Markazi Text',serif;font-size:clamp(16px,2.7dvh,25px);line-height:1.05;max-width:67%}
+@media(max-width:700px){.option{font-size:clamp(15px,2.65dvh,23px)}.qfoot .tip{display:block;max-width:54%;font-size:clamp(12px,2dvh,18px)}.qfoot button{width:auto;flex:1;padding-inline:8px;font-size:clamp(12px,2.1dvh,17px)}}
+</style></head><body><h1>🇶🇦 تقرير المشاركة | رحلة في قلب قطر</h1><p><b>ولية الأمر:</b> ${safe(r.parent)} &nbsp; <b>الطالبة:</b> ${safe(r.daughter)} &nbsp; <b>الصف:</b> ${safe(r.grade)} - ${safe(r.classSection)}</p><p>${safe(r.date)}</p><div class="score">النتيجة: ${r.score} / ${r.total} (${r.percent}%)</div><h2>المحطات</h2><p>${r.sections.map(s=>safe(s.section)+': '+s.correct+'/'+s.total).join(' | ')}</p><table><tr><th>رقم</th><th>السؤال</th><th>الإجابة المختارة</th><th>الصحيحة</th><th>النتيجة</th></tr>${r.answers.map(a=>`<tr><td>${a.number}</td><td>${safe(a.question)}</td><td>${safe(a.chosenText)}</td><td>${safe(a.correctText)}</td><td>${a.isCorrect?'صحيحة':'غير صحيحة'}</td></tr>`).join('')}</table><p>مدرسة العب الثانوية للبنات • فكرة: نادية الغانم</p></body></html>`;let url=URL.createObjectURL(new Blob([h],{type:'text/html;charset=utf-8'}));let a=document.createElement('a');a.href=url;a.download='تقرير-رحلة-قطر.html';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000)};
+</script>
+</body></html>
